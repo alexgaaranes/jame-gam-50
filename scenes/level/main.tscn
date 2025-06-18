@@ -1,48 +1,48 @@
-[gd_scene load_steps=6 format=3 uid="uid://7e302kk2kylr"]
+[gd_scene load_steps=5 format=3 uid="uid://cfun2b4mxcblw"]
 
-[ext_resource type="PackedScene" uid="uid://dduod8t78xf8c" path="res://scenes/player/player.tscn" id="1_oept5"]
+[ext_resource type="Texture2D" uid="uid://du8m33l7gvebq" path="res://assets/Background.png" id="1_64aob"]
+[ext_resource type="PackedScene" uid="uid://kg3kqfg2wqas" path="res://scenes/whale/whale.tscn" id="1_855hj"]
+[ext_resource type="PackedScene" uid="uid://kk2modep8asl" path="res://scenes/galaxy/galaxy.tscn" id="1_iernp"]
+[ext_resource type="PackedScene" uid="uid://esud7bwuxrjp" path="res://scenes/player/player.tscn" id="1_oept5"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_iernp"]
-size = Vector2(20, 20)
+[node name="Main" type="Node2D"]
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_oept5"]
-data = PackedVector3Array(10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, 10, -10, 0, -10, 10, 0, -10)
+[node name="Space" type="Sprite2D" parent="."]
+position = Vector2(960, 536)
+texture = ExtResource("1_64aob")
 
-[sub_resource type="BoxMesh" id="BoxMesh_855hj"]
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(290, 322)
+points = PackedVector2Array(64, 288, 672, 592)
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_64aob"]
+[node name="Line2D2" type="Line2D" parent="."]
+position = Vector2(290, 322)
+points = PackedVector2Array(1256, 288, 672, 592)
 
-[node name="Main" type="Node3D"]
+[node name="Line2D3" type="Line2D" parent="."]
+position = Vector2(290, 322)
+points = PackedVector2Array(1256, 288, 640, 48)
 
-[node name="Floor" type="MeshInstance3D" parent="."]
-mesh = SubResource("PlaneMesh_iernp")
+[node name="Line2D4" type="Line2D" parent="."]
+position = Vector2(290, 322)
+points = PackedVector2Array(64, 280, 640, 48)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Floor"]
+[node name="Whale" parent="." instance=ExtResource("1_855hj")]
+position = Vector2(888, 496)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_oept5")
+[node name="Galaxy" parent="." instance=ExtResource("1_iernp")]
+position = Vector2(336, 200)
 
-[node name="Wall" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.145, 0, 0, 0, 1.62, 0, 0, 0, 3.72, 2.56331, 0, 0)
-mesh = SubResource("BoxMesh_855hj")
+[node name="Galaxy2" parent="." instance=ExtResource("1_iernp")]
+position = Vector2(1624, 168)
 
-[node name="Wall2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.145, 0, 0, 0, 1.62, 0, 0, 0, 3.72, -1.1057, 0, 0)
-mesh = SubResource("BoxMesh_855hj")
+[node name="Galaxy3" parent="." instance=ExtResource("1_iernp")]
+position = Vector2(952, 880)
 
-[node name="Wall3" type="MeshInstance3D" parent="."]
-transform = Transform3D(-6.33815e-09, 0, 3.72, 0, 1.62, 0, -0.145, 0, -1.62606e-07, 0.704184, -0.00713968, -1.81509)
-mesh = SubResource("BoxMesh_855hj")
+[node name="Player" parent="." instance=ExtResource("1_oept5")]
+position = Vector2(392, 464)
 
-[node name="Wall4" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.2, 0, 0, 0, 1.31, 0, 0, 0, 0.2, 0.580081, 1.29531, 0.0757601)
-mesh = SubResource("CylinderMesh_64aob")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.701313, -0.404535, 0.586951, 0.152285, 0.889395, 0.431028, -0.696397, -0.212901, 0.68535, 8.59149, 8.04206, 11.2963)
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.856195, 0.516653, 0, -0.516653, 0.856195, 0.534962, 7.34183, 13.0148)
-
-[node name="RigidBody3D" parent="." instance=ExtResource("1_oept5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.79542, 5.29447)
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(2.15, 2.15)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true

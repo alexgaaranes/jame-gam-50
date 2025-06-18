@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://kk2modep8asl"]
+
+[ext_resource type="Texture2D" uid="uid://cm0oxhpf2ymxv" path="res://assets/Galaxy.png" id="1_ml8fj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a7f5k"]
+radius = 40.0
+height = 160.0
+
+[node name="Area2D" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -40)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_a7f5k")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -80)
+texture = ExtResource("1_ml8fj")

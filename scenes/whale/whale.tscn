@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://kg3kqfg2wqas"]
+
+[ext_resource type="Texture2D" uid="uid://dapwehj0vllfd" path="res://assets/Whale_Stars.png" id="1_3fjcf"]
+[ext_resource type="Texture2D" uid="uid://dxyyl0dowklgo" path="res://assets/Whale_Glow.png" id="1_geyiy"]
+[ext_resource type="Texture2D" uid="uid://2nnst5isys2e" path="res://assets/Whale.png" id="2_3fjcf"]
+
+[node name="Whale" type="Node2D"]
+
+[node name="Stars" type="Sprite2D" parent="."]
+texture = ExtResource("1_3fjcf")
+
+[node name="Glow" type="Sprite2D" parent="."]
+texture = ExtResource("1_geyiy")
+
+[node name="Body" type="Sprite2D" parent="."]
+texture = ExtResource("2_3fjcf")
