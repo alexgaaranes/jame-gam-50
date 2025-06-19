@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://dikyiofeavm15"]
+
+[ext_resource type="Texture2D" uid="uid://du8m33l7gvebq" path="res://assets/Background.png" id="1_dkr82"]
+
+[node name="Level2" type="Node2D"]
+
+[node name="space" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+scale = Vector2(0.666667, 0.666667)
+texture = ExtResource("1_dkr82")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 472.0
+offset_top = 296.0
+offset_right = 816.0
+offset_bottom = 408.0
+theme_override_font_sizes/normal_font_size = 50
+text = "level 2 ehey"
