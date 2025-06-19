@@ -1,1 +1,6 @@
 extends Node
+
+signal entered_whale_collision
+signal exit_whale_collision
+signal entered_galaxy_collision
+signal exit_galaxy_collision

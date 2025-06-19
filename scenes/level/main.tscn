@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cfun2b4mxcblw"]
+[gd_scene load_steps=10 format=3 uid="uid://cfun2b4mxcblw"]
 
 [ext_resource type="Texture2D" uid="uid://du8m33l7gvebq" path="res://assets/Background.png" id="1_64aob"]
 [ext_resource type="PackedScene" uid="uid://kg3kqfg2wqas" path="res://scenes/whale/whale.tscn" id="1_855hj"]
@@ -7,28 +7,19 @@
 [ext_resource type="Script" uid="uid://cge5hujdo2rbe" path="res://scenes/level/galaxy1.gd" id="4_gjage"]
 [ext_resource type="Script" uid="uid://eh3wbx02mj4p" path="res://scenes/level/galaxy2.gd" id="5_x0mk0"]
 [ext_resource type="Script" uid="uid://bm4ch6gyn6jl4" path="res://scenes/level/galaxy3.gd" id="6_2hqms"]
+[ext_resource type="PackedScene" uid="uid://ht2ucbxw6pqq" path="res://scenes/hud/hud.tscn" id="8_1bkat"]
+
+[sub_resource type="Environment" id="Environment_2hqms"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 1.0
+glow_bloom = 0.45
 
 [node name="Main" type="Node2D"]
 
 [node name="Space" type="Sprite2D" parent="."]
 position = Vector2(960, 536)
 texture = ExtResource("1_64aob")
-
-[node name="Line2D" type="Line2D" parent="."]
-position = Vector2(290, 322)
-points = PackedVector2Array(64, 288, 672, 592)
-
-[node name="Line2D2" type="Line2D" parent="."]
-position = Vector2(290, 322)
-points = PackedVector2Array(1256, 288, 672, 592)
-
-[node name="Line2D3" type="Line2D" parent="."]
-position = Vector2(290, 322)
-points = PackedVector2Array(1256, 288, 640, 48)
-
-[node name="Line2D4" type="Line2D" parent="."]
-position = Vector2(290, 322)
-points = PackedVector2Array(64, 280, 640, 48)
 
 [node name="Whale" parent="." instance=ExtResource("1_855hj")]
 position = Vector2(888, 496)
@@ -50,9 +41,16 @@ position = Vector2(388, 708)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(1, 9)
-zoom = Vector2(2.15, 2.15)
+zoom = Vector2(1.5, 1.5)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_2hqms")
+
+[node name="HudCanvas" type="CanvasLayer" parent="."]
+
+[node name="Hud" parent="HudCanvas" instance=ExtResource("8_1bkat")]
 
 [connection signal="body_entered" from="Galaxy" to="Galaxy" method="_on_body_entered"]
 [connection signal="body_entered" from="Galaxy2" to="Galaxy2" method="_on_body_entered"]

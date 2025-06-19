@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://ht2ucbxw6pqq"]
+
+[ext_resource type="Script" uid="uid://bsr6dreqiahu1" path="res://scripts/hud.gd" id="1_48c2t"]
+
+[node name="Hud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_48c2t")
+
+[node name="Whale_Interact_Text" type="Label" parent="."]
+visible = false
+offset_left = 496.0
+offset_top = 600.0
+offset_right = 795.0
+offset_bottom = 650.0
+theme_override_font_sizes/font_size = 36
+text = "Press 'F' to Listen"
+
+[node name="Galaxy_Interact_Text" type="Label" parent="."]
+visible = false
+offset_left = 496.0
+offset_top = 600.0
+offset_right = 795.0
+offset_bottom = 650.0
+theme_override_font_sizes/font_size = 36
+text = "Press 'F' to Explore"
