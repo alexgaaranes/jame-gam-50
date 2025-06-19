@@ -1,11 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://esud7bwuxrjp"]
 
-[ext_resource type="Script" uid="uid://bqjhoh0tt0yog" path="res://scenes/player/player.gd" id="1_8afob"]
+[ext_resource type="Script" uid="uid://ley2lhstl46w" path="res://scenes/player/player.gd" id="1_8afob"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x7p2l"]
 size = Vector2(16, 48)
 
-[node name="Player" type="Area2D"]
+[node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+slide_on_ceiling = false
+wall_min_slide_angle = 0.0
+platform_on_leave = 2
 script = ExtResource("1_8afob")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
