@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://kg3kqfg2wqas" path="res://scenes/whale/whale.tscn" id="1_855hj"]
 [ext_resource type="PackedScene" uid="uid://kk2modep8asl" path="res://scenes/galaxy/galaxy.tscn" id="1_iernp"]
 [ext_resource type="PackedScene" uid="uid://esud7bwuxrjp" path="res://scenes/player/player.tscn" id="1_oept5"]
-[ext_resource type="Script" uid="uid://cge5hujdo2rbe" path="res://scenes/level/level1.gd" id="4_gjage"]
-[ext_resource type="Script" uid="uid://eh3wbx02mj4p" path="res://scenes/level/level2.gd" id="5_x0mk0"]
-[ext_resource type="Script" uid="uid://bm4ch6gyn6jl4" path="res://scenes/level/level3.gd" id="6_2hqms"]
+[ext_resource type="Script" uid="uid://cge5hujdo2rbe" path="res://scenes/level/galaxy1.gd" id="4_gjage"]
+[ext_resource type="Script" uid="uid://eh3wbx02mj4p" path="res://scenes/level/galaxy2.gd" id="5_x0mk0"]
+[ext_resource type="Script" uid="uid://bm4ch6gyn6jl4" path="res://scenes/level/galaxy3.gd" id="6_2hqms"]
 
 [node name="Main" type="Node2D"]
 
