@@ -13,6 +13,7 @@ script = ExtResource("1_48c2t")
 
 [node name="Whale_Interact_Text" type="Label" parent="."]
 visible = false
+layout_mode = 0
 offset_left = 496.0
 offset_top = 600.0
 offset_right = 795.0
@@ -22,6 +23,7 @@ text = "Press 'F' to Listen"
 
 [node name="Galaxy_Interact_Text" type="Label" parent="."]
 visible = false
+layout_mode = 0
 offset_left = 496.0
 offset_top = 600.0
 offset_right = 795.0

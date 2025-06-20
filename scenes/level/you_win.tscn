@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cdmmd66v4chjy"]
 
-[ext_resource type="Script" uid="uid://ob5fvp74c28v" path="res://scenes/level/game_over_or_win.gd" id="1_7htsi"]
+[ext_resource type="Script" uid="uid://ob5fvp74c28v" path="res://scenes/level/ui/game_over_or_win.gd" id="1_7htsi"]
 
 [node name="YouWin" type="CanvasLayer"]
 script = ExtResource("1_7htsi")

@@ -36,6 +36,5 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	else:
 		emit_signal("lose")
 
-
-func _on_button_pressed() -> void:
+func _on_back_pressed() -> void:
 	done = true

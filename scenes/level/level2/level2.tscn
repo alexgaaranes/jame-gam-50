@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dikyiofeavm15"]
 
 [ext_resource type="Texture2D" uid="uid://du8m33l7gvebq" path="res://assets/Background.png" id="1_q0vuy"]
-[ext_resource type="Script" uid="uid://cgxsngi6xlhit" path="res://scenes/level/level_back_button.gd" id="2_pr0p5"]
+[ext_resource type="PackedScene" uid="uid://dccyi75h8ivau" path="res://scenes/level/ui/back.tscn" id="2_q0vuy"]
 
 [node name="Level2" type="Node2D"]
 process_mode = 3
@@ -19,12 +19,4 @@ offset_bottom = 408.0
 theme_override_font_sizes/normal_font_size = 50
 text = "level 2 ehey"
 
-[node name="Button" type="Button" parent="."]
-offset_left = 48.0
-offset_top = 34.0
-offset_right = 178.0
-offset_bottom = 83.0
-text = "BACK"
-script = ExtResource("2_pr0p5")
-
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[node name="Back" parent="." instance=ExtResource("2_q0vuy")]

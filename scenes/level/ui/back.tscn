@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dccyi75h8ivau"]
+
+[ext_resource type="Script" uid="uid://jocdo5wyhooh" path="res://scenes/level/ui/back.gd" id="1_ctfpk"]
+
+[node name="Back" type="CanvasLayer" groups=["ui"]]
+script = ExtResource("1_ctfpk")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 48.0
+offset_top = 34.0
+offset_right = 178.0
+offset_bottom = 83.0
+text = "BACK"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
