@@ -25,8 +25,6 @@ func pause_scene(scene_root: Node) -> void:
 			
 func _load_level1() -> void:
 	var level1 = preload("res://scenes/level/level1/level1.tscn").instantiate()
-	
-	level1.process_mode = Node.PROCESS_MODE_ALWAYS
 		
 	# Add level1 to the root of the scene tree
 	get_tree().root.add_child(level1)

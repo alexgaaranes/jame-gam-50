@@ -16,9 +16,15 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		call_deferred("_load_level2")
 
+func pause_scene(scene_root: Node) -> void:
+	for node in scene_root.get_children():
+		if node is Node:
+			node.process_mode = Node.PROCESS_MODE_DISABLED
+			pause_scene(node)  # Recursively pause children
+			
 func _load_level2() -> void:
 	var level2 = preload("res://scenes/level/level2/level2.tscn").instantiate()
-
+		
 	# Add level2 to the root of the scene tree
 	get_tree().root.add_child(level2)
 
@@ -27,7 +33,7 @@ func _load_level2() -> void:
 	scene1_camera.enabled = false
 
 	# Pause everything (if needed)
-	get_tree().paused = true
+	pause_scene(get_tree().current_scene)
 
 	# Set current scene
 	get_tree().current_scene = level2
