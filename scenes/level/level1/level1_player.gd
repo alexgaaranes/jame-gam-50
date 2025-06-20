@@ -16,14 +16,15 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var xdirection := Input.get_axis("left", "right")
 	if xdirection:
-		velocity.x = xdirection * SPEED
-		velocity.y = 0
-
+		if xdirection * velocity.x >= 0:
+			velocity.x = xdirection * SPEED
+			velocity.y = 0
 
 	var ydirection := Input.get_axis("up", "down")
 	if ydirection:
-		velocity.y = ydirection * SPEED
-		velocity.x = 0
+		if ydirection * velocity.y >= 0:
+			velocity.y = ydirection * SPEED
+			velocity.x = 0
 
 	move_and_slide()
 
