@@ -1,0 +1,267 @@
+[gd_scene load_steps=9 format=3 uid="uid://5rlpqdl26iyt"]
+
+[ext_resource type="Script" uid="uid://c6r3hctfd6r5o" path="res://scenes/level/level1/level_1.gd" id="1_mshvf"]
+[ext_resource type="Texture2D" uid="uid://du8m33l7gvebq" path="res://assets/Background.png" id="1_rdidq"]
+[ext_resource type="Script" uid="uid://cgxsngi6xlhit" path="res://scenes/level/level_back_button.gd" id="2_0crt6"]
+[ext_resource type="PackedScene" uid="uid://duax8jnrb45h6" path="res://scenes/level/level1/barrier.tscn" id="3_hup2f"]
+[ext_resource type="PackedScene" uid="uid://dx6mvufe7jsy7" path="res://scenes/level/level1/level1_player.tscn" id="4_mshvf"]
+[ext_resource type="PackedScene" uid="uid://bs21d2sl3ik2i" path="res://scenes/level/level1/goal.tscn" id="6_mshvf"]
+[ext_resource type="PackedScene" uid="uid://b3f1m7svlhixv" path="res://scenes/level/game_over.tscn" id="7_fnolb"]
+[ext_resource type="PackedScene" uid="uid://cdmmd66v4chjy" path="res://scenes/level/you_win.tscn" id="8_ssrwo"]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_mshvf")
+
+[node name="space" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+scale = Vector2(0.666667, 0.666667)
+texture = ExtResource("1_rdidq")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 48.0
+offset_top = 34.0
+offset_right = 178.0
+offset_bottom = 83.0
+text = "BACK"
+script = ExtResource("2_0crt6")
+
+[node name="barrier3" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(48, 448)
+
+[node name="barrier4" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(24, 320)
+
+[node name="barrier5" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(208, 576)
+scale = Vector2(2.285, 2.285)
+
+[node name="barrier7" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(48, 384)
+
+[node name="barrier8" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(0, 512)
+scale = Vector2(3.29, 3.29)
+
+[node name="barrier9" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(0, 256)
+
+[node name="barrier" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(352, 576)
+scale = Vector2(2.27, 2.27)
+
+[node name="barrier2" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(659.36, 1851.28)
+scale = Vector2(4.7089, 4.7089)
+
+[node name="barrier6" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(496, 336)
+scale = Vector2(2.17, 2.17)
+
+[node name="barrier10" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(360, 336)
+scale = Vector2(2.17, 2.17)
+
+[node name="barrier11" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(600, 512)
+scale = Vector2(1.95, 1.95)
+
+[node name="barrier12" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(688, 512)
+scale = Vector2(1.95, 1.95)
+
+[node name="barrier13" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(1160, 600)
+scale = Vector2(1.95, 1.95)
+
+[node name="barrier14" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(1040, 600)
+scale = Vector2(1.95, 1.95)
+
+[node name="barrier15" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(808, 512)
+
+[node name="barrier16" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(976, 664)
+
+[node name="barrier17" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(808, 456)
+
+[node name="barrier18" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(224, 248)
+scale = Vector2(2.17, 2.17)
+
+[node name="barrier19" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(224, 176)
+scale = Vector2(2.17, 2.17)
+
+[node name="barrier20" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(280, 88)
+scale = Vector2(2.17, 2.17)
+
+[node name="barrier21" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(280, -24)
+scale = Vector2(2.17, 2.17)
+
+[node name="barrier22" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(880, 232)
+scale = Vector2(2.17, 2.17)
+
+[node name="barrier24" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(616, 336)
+
+[node name="barrier23" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(1040, 544)
+scale = Vector2(0.92, 0.92)
+
+[node name="barrier25" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(1040, 488)
+scale = Vector2(0.92, 0.92)
+
+[node name="barrier26" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(960, 360)
+scale = Vector2(2.17, 2.17)
+
+[node name="barrier27" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(512, 96)
+scale = Vector2(1.285, 1.285)
+
+[node name="barrier28" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(576, 96)
+scale = Vector2(1.88, 1.88)
+
+[node name="barrier29" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(696, 112)
+scale = Vector2(1.63, 1.63)
+
+[node name="barrier30" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(800, 112)
+scale = Vector2(2.17, 2.17)
+
+[node name="barrier31" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(1160, -9.15527e-05)
+scale = Vector2(1.95, 1.95)
+
+[node name="barrier32" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(1096, -72.0001)
+scale = Vector2(1.95, 1.95)
+
+[node name="barrier33" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(984, -112)
+scale = Vector2(1.95, 1.95)
+
+[node name="barrier34" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(1280, -24)
+scale = Vector2(11.61, 11.61)
+
+[node name="barrier35" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(336, 720)
+scale = Vector2(11.61, 11.61)
+
+[node name="barrier36" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(-744, -304)
+scale = Vector2(11.61, 11.61)
+
+[node name="barrier37" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(272, -744)
+scale = Vector2(11.61, 11.61)
+
+[node name="barrier38" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(-424, -744)
+scale = Vector2(11.61, 11.61)
+
+[node name="barrier39" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(1200, 192)
+scale = Vector2(1.275, 1.275)
+
+[node name="barrier40" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(1152, 192)
+scale = Vector2(1.275, 1.275)
+
+[node name="barrier41" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(768, -32)
+scale = Vector2(1.465, 1.465)
+collision_layer = 3
+collision_mask = 3
+
+[node name="Trail" type="Line2D" parent="."]
+width = 5.0
+
+[node name="barrier42" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(560, 56)
+scale = Vector2(1.285, 1.285)
+
+[node name="barrier43" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(0, 384)
+
+[node name="barrier44" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(-40, 320)
+
+[node name="barrier45" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(0, 448)
+
+[node name="barrier46" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(632, 496)
+
+[node name="barrier47" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(448, 464)
+
+[node name="barrier48" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(1016, 104)
+
+[node name="Goal" parent="." groups=["goal"] instance=ExtResource("6_mshvf")]
+position = Vector2(1256, 544)
+
+[node name="barrier49" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(1232, 464)
+
+[node name="barrier50" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(488, 672)
+
+[node name="barrier51" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(648, 616)
+
+[node name="barrier52" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(976, 600)
+
+[node name="barrier53" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(872, 544)
+scale = Vector2(0.715, 0.715)
+
+[node name="barrier54" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(816, 680)
+
+[node name="barrier55" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(936, 408)
+
+[node name="barrier56" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(1096, 416)
+
+[node name="barrier57" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(1152, 336)
+
+[node name="barrier58" parent="." instance=ExtResource("3_hup2f")]
+position = Vector2(576, 272)
+scale = Vector2(1.275, 1.275)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 574.0
+offset_top = 14.0
+offset_right = 918.0
+offset_bottom = 126.0
+theme_override_font_sizes/normal_font_size = 50
+text = "level 1"
+
+[node name="Player_level1" parent="." instance=ExtResource("4_mshvf")]
+position = Vector2(40, 80)
+
+[node name="GameOver" parent="." instance=ExtResource("7_fnolb")]
+process_mode = 3
+visible = false
+
+[node name="YouWin" parent="." instance=ExtResource("8_ssrwo")]
+visible = false
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="lose" from="Player_level1" to="." method="_on_player_level_1_lose"]
+[connection signal="ready" from="Player_level1" to="Player_level1" method="_on_ready"]
+[connection signal="win" from="Player_level1" to="." method="_on_player_level_1_win"]

@@ -1,4 +1,4 @@
-extends Button
+extends Node2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,13 +11,17 @@ func _process(delta: float) -> void:
 	pass
 
 
+func _on_play_again_pressed() -> void:
+	get_tree().change_scene_to_file(get_tree().current_scene.scene_file_path)
+
+
 func resume_scene(scene_root: Node) -> void:
 	for node in scene_root.get_children():
 		if node is Node:
 			node.process_mode = Node.PROCESS_MODE_ALWAYS
 			resume_scene(node)
 			
-func _on_pressed() -> void:
+func _on_return_pressed() -> void:
 	var main_scene = get_tree().root.get_node("Main")
 	
 	resume_scene(main_scene)
@@ -33,7 +37,6 @@ func _on_pressed() -> void:
 	get_tree().current_scene.queue_free()
 	player.collision_layer = 1  
 	player.collision_mask = 1   
-
+	
 	
 	get_tree().current_scene = main_scene
-	
