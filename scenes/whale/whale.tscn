@@ -8,8 +8,8 @@
 [ext_resource type="Script" uid="uid://yh1f0m11c0e1" path="res://scripts/whale_collision.gd" id="6_hwsnh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mo2fg"]
-radius = 93.0
-height = 348.0
+radius = 163.0
+height = 566.0
 
 [node name="Whale" type="Node2D"]
 
