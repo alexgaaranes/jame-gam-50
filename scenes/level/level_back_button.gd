@@ -1,6 +1,5 @@
 extends Button
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -19,6 +18,8 @@ func resume_scene(scene_root: Node) -> void:
 			
 func _on_pressed() -> void:
 	var main_scene = get_tree().root.get_node("Main")
+	for node in get_tree().get_nodes_in_group("ui"):
+		node.visible = false
 	
 	resume_scene(main_scene)
 	
@@ -33,7 +34,6 @@ func _on_pressed() -> void:
 	get_tree().current_scene.queue_free()
 	player.collision_layer = 1  
 	player.collision_mask = 1   
-
 	
 	get_tree().current_scene = main_scene
 	

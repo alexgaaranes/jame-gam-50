@@ -29,8 +29,12 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
+	done = true
 	if area.is_in_group("goal"):
 		emit_signal("win")
 	else:
-		done = true
 		emit_signal("lose")
+
+
+func _on_button_pressed() -> void:
+	done = true

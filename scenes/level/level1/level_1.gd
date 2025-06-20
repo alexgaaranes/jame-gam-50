@@ -2,8 +2,9 @@ extends Node2D
 
 @onready var player_level_1: CharacterBody2D = $Player_level1
 @onready var trail: Line2D = $Trail
-@onready var game_over: Node2D = $GameOver
-@onready var you_win: Node2D = $YouWin
+@onready var game_over: CanvasLayer = $GameOver
+@onready var you_win: CanvasLayer = $YouWin
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
