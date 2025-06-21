@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://b62alsgwafu7u"]
+
+[ext_resource type="Script" uid="uid://e7gmtbc5xmdh" path="res://scripts/bulb.gd" id="1_wrghn"]
+
+[node name="Bulb" type="Node2D"]
+script = ExtResource("1_wrghn")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.610925, 0.468012, 0.196098, 1)
+polygon = PackedVector2Array(-8, -24, 8, -24, 16, -16, 16, 0, 8, 8, 8, 16, -8, 16, -8, 8, -16, 0, -16, -16)
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+color = Color(0.442911, 0.442911, 0.442911, 1)
+polygon = PackedVector2Array(-8, 16, -8, 24, 8, 24, 8, 16)
