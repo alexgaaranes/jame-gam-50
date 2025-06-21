@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bs21d2sl3ik2i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmox8"]
+size = Vector2(24, 40)
+
+[node name="Goal" type="Area2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 24.0
+offset_bottom = 40.0
+color = Color(0.191324, 0.455514, 0.841294, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(12, 20)
+shape = SubResource("RectangleShape2D_pmox8")

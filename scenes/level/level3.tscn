@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bovspi5dvlsb0"]
+[gd_scene load_steps=2 format=3 uid="uid://btd55demmfnfy"]
 
 [ext_resource type="Texture2D" uid="uid://du8m33l7gvebq" path="res://assets/Background.png" id="1_ga8lq"]
-[ext_resource type="Script" uid="uid://cgxsngi6xlhit" path="res://scenes/level/level_back_button.gd" id="2_mit3r"]
 
 [node name="Level3" type="Node2D"]
 process_mode = 3
@@ -25,6 +24,5 @@ offset_top = 34.0
 offset_right = 178.0
 offset_bottom = 83.0
 text = "BACK"
-script = ExtResource("2_mit3r")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

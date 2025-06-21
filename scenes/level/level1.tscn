@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://5rlpqdl26iyt"]
+[gd_scene load_steps=3 format=3 uid="uid://g53nicbg4rqp"]
 
 [ext_resource type="Texture2D" uid="uid://du8m33l7gvebq" path="res://assets/Background.png" id="1_nggc0"]
-[ext_resource type="Script" uid="uid://cgxsngi6xlhit" path="res://scenes/level/level_back_button.gd" id="2_gvmle"]
+[ext_resource type="Script" path="res://scenes/level/level_back_button.gd" id="2_gvmle"]
 
 [node name="Level1" type="Node2D"]
 process_mode = 3
