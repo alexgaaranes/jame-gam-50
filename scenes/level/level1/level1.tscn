@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bs21d2sl3ik2i" path="res://scenes/level/level1/goal.tscn" id="6_mshvf"]
 [ext_resource type="PackedScene" uid="uid://dccyi75h8ivau" path="res://scenes/level/ui/back.tscn" id="6_ssrwo"]
 [ext_resource type="PackedScene" uid="uid://b3f1m7svlhixv" path="res://scenes/level/ui/game_over.tscn" id="7_fnolb"]
-[ext_resource type="PackedScene" uid="uid://cdmmd66v4chjy" path="res://scenes/level/you_win.tscn" id="8_ssrwo"]
+[ext_resource type="PackedScene" uid="uid://cdmmd66v4chjy" path="res://scenes/level/ui/you_win.tscn" id="8_ssrwo"]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_mshvf")

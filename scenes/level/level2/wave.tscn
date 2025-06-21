@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvd08pxfwxsti"]
+
+[ext_resource type="Script" uid="uid://btd8c5dwjg6vk" path="res://scenes/level/level2/adjust_wave.gd" id="1_irsjx"]
+
+[node name="Wave" type="Line2D"]
+points = PackedVector2Array(640, 376)
+width = 5.0
+script = ExtResource("1_irsjx")

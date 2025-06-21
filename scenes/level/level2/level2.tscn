@@ -1,10 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://dikyiofeavm15"]
+[gd_scene load_steps=8 format=3 uid="uid://dikyiofeavm15"]
 
 [ext_resource type="Texture2D" uid="uid://du8m33l7gvebq" path="res://assets/Background.png" id="1_q0vuy"]
+[ext_resource type="Script" uid="uid://b77mvrsyxfr16" path="res://scenes/level/level2/level_2.gd" id="1_vjjvc"]
 [ext_resource type="PackedScene" uid="uid://dccyi75h8ivau" path="res://scenes/level/ui/back.tscn" id="2_q0vuy"]
+[ext_resource type="PackedScene" uid="uid://ddgnxsqnwkbho" path="res://scenes/level/level2/correct_wave.tscn" id="3_ney6i"]
+[ext_resource type="PackedScene" uid="uid://4axunld1eoys" path="res://providers/fkeyzKnob-722325ebd60e0ee62ca20da56863c9b61790c7ac/addons/fkeyz_knob/knob.tscn" id="4_jgnos"]
+[ext_resource type="PackedScene" uid="uid://cwh0dn2f6cceb" path="res://scenes/level/level2/adjust_wave.tscn" id="4_tick8"]
+[ext_resource type="PackedScene" uid="uid://cdmmd66v4chjy" path="res://scenes/level/ui/you_win.tscn" id="7_iakny"]
 
 [node name="Level2" type="Node2D"]
 process_mode = 3
+script = ExtResource("1_vjjvc")
 
 [node name="space" type="Sprite2D" parent="."]
 position = Vector2(640, 360)
@@ -12,11 +18,75 @@ scale = Vector2(0.666667, 0.666667)
 texture = ExtResource("1_q0vuy")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 472.0
-offset_top = 296.0
-offset_right = 816.0
-offset_bottom = 408.0
+offset_left = 464.0
+offset_top = 24.0
+offset_right = 808.0
+offset_bottom = 136.0
 theme_override_font_sizes/normal_font_size = 50
-text = "level 2 ehey"
+text = "level 2"
+horizontal_alignment = 1
 
 [node name="Back" parent="." instance=ExtResource("2_q0vuy")]
+
+[node name="Correct Wave" parent="." instance=ExtResource("3_ney6i")]
+position = Vector2(192, 192)
+
+[node name="Adjust Wave" parent="." instance=ExtResource("4_tick8")]
+position = Vector2(704, 192)
+
+[node name="Freq Knob" parent="." instance=ExtResource("4_jgnos")]
+offset_left = 288.0
+offset_top = 448.0
+offset_right = 448.0
+offset_bottom = 608.0
+
+[node name="Speed Knob" parent="." instance=ExtResource("4_jgnos")]
+offset_left = 832.0
+offset_top = 448.0
+offset_right = 992.0
+offset_bottom = 608.0
+
+[node name="Amp Knob" parent="." instance=ExtResource("4_jgnos")]
+offset_left = 560.0
+offset_top = 448.0
+offset_right = 720.0
+offset_bottom = 608.0
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 240.0
+offset_top = 616.0
+offset_right = 504.0
+offset_bottom = 728.0
+theme_override_font_sizes/normal_font_size = 30
+text = "frequency"
+horizontal_alignment = 1
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+offset_left = 512.0
+offset_top = 616.0
+offset_right = 776.0
+offset_bottom = 728.0
+theme_override_font_sizes/normal_font_size = 30
+text = "amplitude"
+horizontal_alignment = 1
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="."]
+offset_left = 784.0
+offset_top = 616.0
+offset_right = 1048.0
+offset_bottom = 728.0
+theme_override_font_sizes/normal_font_size = 30
+text = "speed"
+horizontal_alignment = 1
+
+[node name="YouWin" parent="." groups=["ui"] instance=ExtResource("7_iakny")]
+
+[connection signal="win" from="Adjust Wave/Adjust Wave" to="." method="_on_adjust_wave_win"]
+[connection signal="dial_rotated" from="Freq Knob" to="Adjust Wave/Adjust Wave" method="_on_freq_knob_dial_rotated"]
+[connection signal="dragging" from="Freq Knob" to="Adjust Wave/Adjust Wave" method="_on_freq_knob_dragging"]
+[connection signal="dial_rotated" from="Speed Knob" to="Adjust Wave/Adjust Wave" method="_on_speed_knob_dial_rotated"]
+[connection signal="dragging" from="Speed Knob" to="Adjust Wave/Adjust Wave" method="_on_speed_knob_dragging"]
+[connection signal="dial_rotated" from="Amp Knob" to="Adjust Wave/Adjust Wave" method="_on_amp_knob_dial_rotated"]
+[connection signal="dragging" from="Amp Knob" to="Adjust Wave/Adjust Wave" method="_on_amp_knob_dragging"]
+
+[editable path="Adjust Wave"]
