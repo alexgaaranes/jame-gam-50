@@ -16,6 +16,7 @@ func toggle():
 	is_on = !is_on
 	update_visual()
 	emit_signal("state_changed", is_on)
+	GlobalAudio.play_flick_lever()
 
 func update_visual():
 	$on_base.visible = is_on

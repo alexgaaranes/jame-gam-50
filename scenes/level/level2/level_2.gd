@@ -13,6 +13,7 @@ func _ready() -> void:
 	you_win.visible = false
 	game_over.visible = false
 	timer.start(61)
+	GlobalAudio.play_electric_hum()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

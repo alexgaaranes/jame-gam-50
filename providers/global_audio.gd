@@ -5,6 +5,8 @@ extends Node
 @onready var win_bgm = preload("res://assets/audio/win.mp3")
 @onready var menu_bgm = preload("res://assets/audio/main bg music.mp3")
 @onready var rocket_loop = preload("res://assets/audio/rocket loop.mp3")
+@onready var flick_lever = preload("res://assets/audio/clock(puzzle).mp3")
+@onready var electric_hum = preload("res://assets/audio/electric hum (puzzles maybe).mp3")
 
 var audio_player = null
 var bgm_player = null
@@ -43,6 +45,16 @@ func play_rocket():
 		audio_player.play()
 		await audio_player.finished
 		audio_player.volume_db = 0
+
+func play_flick_lever():
+	audio_player.stream = flick_lever
+	audio_player.play()
+	await audio_player.finished
+
+func play_electric_hum():
+	audio_player.stream = electric_hum
+	audio_player.play()
+	await audio_player.finished
 
 func play_listen_whale():
 	audio_player.stream = listen_whale

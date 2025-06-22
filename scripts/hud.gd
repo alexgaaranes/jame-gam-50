@@ -60,43 +60,52 @@ func _on_dialogue_timer_timeout():
 	match dialogue:
 		0:
 			$Whale_Dialogue.visible = false
-			dialogue += 1
-			$Dialogue_Timer.start()
-			$Whale_Dialogue2.visible = true
+			if GlobalSignals.number_of_solved >= 3:
+				dialogue += 1
+				$Dialogue_Timer.start()
+				$Whale_Dialogue2.visible = true
+				GlobalAudio.play_listen_whale()
 		1:
 			$Whale_Dialogue2.visible = false
 			dialogue += 1
 			$Dialogue_Timer.start()
 			$Whale_Dialogue3.visible = true
+			GlobalAudio.play_listen_whale()
 		2:
 			$Whale_Dialogue3.visible = false
 			dialogue += 1
 			$Dialogue_Timer.start()
 			$Whale_Dialogue4.visible = true
+			GlobalAudio.play_listen_whale()
 		3:
 			$Whale_Dialogue4.visible = false
 			dialogue += 1
 			$Dialogue_Timer.start()
 			$Whale_Dialogue5.visible = true
+			GlobalAudio.play_listen_whale()
 		4:
 			$Whale_Dialogue5.visible = false
 			dialogue += 1
 			$Dialogue_Timer.start()
 			$Whale_Dialogue6.visible = true
+			GlobalAudio.play_listen_whale()
 		5:
 			$Whale_Dialogue6.visible = false
 			dialogue += 1
 			$Dialogue_Timer.start()
 			$Whale_Dialogue7.visible = true
+			GlobalAudio.play_listen_whale()
 		6:
 			$Whale_Dialogue7.visible = false
 			dialogue += 1
 			$Dialogue_Timer.start()
 			$Whale_Dialogue8.visible = true
+			GlobalAudio.play_listen_whale()
 		7:
 			$Whale_Dialogue8.visible = false
 			dialogue += 1
 			$Dialogue_Timer.start()
+			GlobalAudio.play_listen_whale()
 		8:
 			$ColorRect.visible = true
 			$Thank_You.visible = true
