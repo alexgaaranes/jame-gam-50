@@ -2,6 +2,8 @@ extends Node2D
 
 var is_on := false
 
+signal state_changed(new_state)
+
 func _ready():
 	$Area2D.connect("input_event", _on_input_event)
 	update_visual()
@@ -13,6 +15,7 @@ func _on_input_event(viewport, event, shape_idx):
 func toggle():
 	is_on = !is_on
 	update_visual()
+	emit_signal("state_changed", is_on)
 
 func update_visual():
 	$on_base.visible = is_on

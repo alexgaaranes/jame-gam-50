@@ -1,6 +1,9 @@
-[gd_scene load_steps=0 format=3 uid="uid://152dporr1jot"]
+[gd_scene load_steps=2 format=3 uid="uid://152dporr1jot"]
+
+[ext_resource type="Script" uid="uid://caxmqhuqmswqw" path="res://scripts/not_gate.gd" id="1_rayjs"]
 
 [node name="NotGate" type="Node2D"]
+script = ExtResource("1_rayjs")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 color = Color(0.64456, 0.00600288, 2.88785e-07, 1)

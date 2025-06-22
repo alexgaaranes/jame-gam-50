@@ -5,10 +5,15 @@
 [node name="Bulb" type="Node2D"]
 script = ExtResource("1_wrghn")
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
-color = Color(0.610925, 0.468012, 0.196098, 1)
+[node name="off_head" type="Polygon2D" parent="."]
+color = Color(0.430645, 0.325102, 0.122976, 1)
 polygon = PackedVector2Array(-8, -24, 8, -24, 16, -16, 16, 0, 8, 8, 8, 16, -8, 16, -8, 8, -16, 0, -16, -16)
 
-[node name="Polygon2D2" type="Polygon2D" parent="."]
+[node name="on_head" type="Polygon2D" parent="."]
+visible = false
+color = Color(0.807476, 0.631857, 0.305238, 1)
+polygon = PackedVector2Array(-8, -24, 8, -24, 16, -16, 16, 0, 8, 8, 8, 16, -8, 16, -8, 8, -16, 0, -16, -16)
+
+[node name="base" type="Polygon2D" parent="."]
 color = Color(0.442911, 0.442911, 0.442911, 1)
 polygon = PackedVector2Array(-8, 16, -8, 24, 8, 24, 8, 16)

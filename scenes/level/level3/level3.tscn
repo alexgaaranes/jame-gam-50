@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://bovspi5dvlsb0"]
+[gd_scene load_steps=9 format=3 uid="uid://bovspi5dvlsb0"]
 
 [ext_resource type="Texture2D" uid="uid://du8m33l7gvebq" path="res://assets/Background.png" id="1_3l3rd"]
+[ext_resource type="Script" uid="uid://chw6b4qcx65vc" path="res://scripts/LogicManager.gd" id="1_3u5vx"]
 [ext_resource type="PackedScene" uid="uid://dccyi75h8ivau" path="res://scenes/level/ui/back.tscn" id="2_3l3rd"]
 [ext_resource type="PackedScene" uid="uid://b62alsgwafu7u" path="res://scenes/level/level3/bulb.tscn" id="3_ymasj"]
 [ext_resource type="PackedScene" uid="uid://b2ryemasabral" path="res://scenes/level/level3/and_gate.tscn" id="4_ukuow"]
@@ -10,6 +11,7 @@
 
 [node name="Level3" type="Node2D"]
 process_mode = 3
+script = ExtResource("1_3u5vx")
 
 [node name="space" type="Sprite2D" parent="."]
 position = Vector2(640, 360)
@@ -64,7 +66,7 @@ width = 5.0
 default_color = Color(0.537011, 0.537011, 0.537011, 1)
 
 [node name="Line2D11" type="Line2D" parent="."]
-points = PackedVector2Array(360, 400, 120, 400)
+points = PackedVector2Array(352, 416, 120, 400)
 width = 5.0
 default_color = Color(0.537011, 0.537011, 0.537011, 1)
 
@@ -73,8 +75,13 @@ points = PackedVector2Array(208, 440, 120, 456)
 width = 5.0
 default_color = Color(0.537011, 0.537011, 0.537011, 1)
 
+[node name="Line2D51" type="Line2D" parent="."]
+points = PackedVector2Array(208, 456, 128, 528)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
 [node name="Line2D13" type="Line2D" parent="."]
-points = PackedVector2Array(240, 448, 360, 416)
+points = PackedVector2Array(288, 312, 360, 400)
 width = 5.0
 default_color = Color(0.537011, 0.537011, 0.537011, 1)
 

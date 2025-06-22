@@ -1,17 +1,11 @@
 extends Node2D
 
-var is_on = false
+var is_on := false
 
-func _ready():
-	GlobalSignals.emit_signal("turn_bulb_off", turn_off)
-	GlobalSignals.emit_signal("turn_bulb_on", turn_on)
+func set_state(state: bool) -> void:
+	is_on = state
+	update_visual()
 
-func _process(delta):
-	pass
-
-# Listeners
-func turn_on():
-	is_on = true
-
-func turn_off():
-	is_on = false
+func update_visual():
+	$on_head.visible = is_on
+	$off_head.visible = not is_on
