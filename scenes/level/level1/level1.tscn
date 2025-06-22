@@ -276,10 +276,10 @@ position = Vector2(40, 80)
 
 [node name="Back" parent="." instance=ExtResource("6_ssrwo")]
 
-[node name="GameOver" parent="." groups=["ui"] instance=ExtResource("7_fnolb")]
+[node name="GameOver" parent="." instance=ExtResource("7_fnolb")]
 visible = false
 
-[node name="YouWin" parent="." groups=["ui"] instance=ExtResource("8_ssrwo")]
+[node name="YouWin" parent="." instance=ExtResource("8_ssrwo")]
 visible = false
 
 [connection signal="lose" from="Player_level1" to="." method="_on_player_level_1_lose"]

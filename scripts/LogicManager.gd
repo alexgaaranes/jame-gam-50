@@ -1,4 +1,5 @@
 extends Node
+@onready var you_win: CanvasLayer = $YouWin
 
 func _ready():
 	# setup lahat ng connections haha
@@ -66,3 +67,8 @@ func _ready():
 	$Lever7.emit_signal("state_changed", $Lever7.is_on)
 	$Lever8.emit_signal("state_changed", $Lever8.is_on)
 	$Lever9.emit_signal("state_changed", $Lever9.is_on)
+	you_win.visible = false
+	
+func show_you_win():
+	you_win.visible = true
+	
