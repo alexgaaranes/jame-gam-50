@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bovspi5dvlsb0"]
+[gd_scene load_steps=13 format=3 uid="uid://bovspi5dvlsb0"]
 
 [ext_resource type="Texture2D" uid="uid://du8m33l7gvebq" path="res://assets/Background.png" id="1_3l3rd"]
 [ext_resource type="Script" uid="uid://chw6b4qcx65vc" path="res://scripts/LogicManager.gd" id="1_3u5vx"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://drjhgfwtv6pp7" path="res://scenes/level/ui/timer.tscn" id="9_jepui"]
 [ext_resource type="PackedScene" uid="uid://cdmmd66v4chjy" path="res://scenes/level/ui/you_win.tscn" id="9_rk8cu"]
 [ext_resource type="PackedScene" uid="uid://b3f1m7svlhixv" path="res://scenes/level/ui/game_over.tscn" id="11_1ugym"]
+[ext_resource type="Texture2D" uid="uid://d0dfliwvd3lsx" path="res://assets/Level 3.png" id="12_1ugym"]
 
 [node name="Level3" type="Node2D"]
 process_mode = 3
@@ -426,3 +427,8 @@ visible = false
 
 [node name="GameOver" parent="." instance=ExtResource("11_1ugym")]
 visible = false
+
+[node name="title" type="Sprite2D" parent="."]
+position = Vector2(640, 56)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("12_1ugym")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dikyiofeavm15"]
+[gd_scene load_steps=11 format=3 uid="uid://dikyiofeavm15"]
 
 [ext_resource type="Texture2D" uid="uid://du8m33l7gvebq" path="res://assets/Background.png" id="1_q0vuy"]
 [ext_resource type="Script" uid="uid://b77mvrsyxfr16" path="res://scenes/level/level2/level_2.gd" id="1_vjjvc"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cdmmd66v4chjy" path="res://scenes/level/ui/you_win.tscn" id="7_iakny"]
 [ext_resource type="PackedScene" uid="uid://drjhgfwtv6pp7" path="res://scenes/level/ui/timer.tscn" id="7_p170t"]
 [ext_resource type="PackedScene" uid="uid://b3f1m7svlhixv" path="res://scenes/level/ui/game_over.tscn" id="8_iakny"]
+[ext_resource type="Texture2D" uid="uid://bysppnj5u25c4" path="res://assets/Level 2.png" id="10_0vpf3"]
 
 [node name="Level2" type="Node2D"]
 process_mode = 3
@@ -20,6 +21,7 @@ scale = Vector2(0.666667, 0.666667)
 texture = ExtResource("1_q0vuy")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
 offset_left = 464.0
 offset_top = 24.0
 offset_right = 808.0
@@ -96,6 +98,11 @@ visible = false
 
 [node name="GameOver" parent="." instance=ExtResource("8_iakny")]
 visible = false
+
+[node name="title" type="Sprite2D" parent="."]
+position = Vector2(640, 56)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("10_0vpf3")
 
 [connection signal="win" from="Adjust Wave/Adjust Wave" to="." method="_on_adjust_wave_win"]
 [connection signal="dial_rotated" from="Freq Knob" to="Adjust Wave/Adjust Wave" method="_on_freq_knob_dial_rotated"]

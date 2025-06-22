@@ -13,16 +13,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_48c2t")
 
-[node name="Whale_Interact_Text" type="Label" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 496.0
-offset_top = 600.0
-offset_right = 795.0
-offset_bottom = 650.0
-theme_override_font_sizes/font_size = 36
-text = "Press 'F' to Listen"
-
 [node name="Whale_Dialogue" type="Label" parent="."]
 visible = false
 layout_mode = 0
@@ -32,16 +22,6 @@ offset_right = 795.0
 offset_bottom = 650.0
 theme_override_font_sizes/font_size = 36
 text = "Press 'F' to Listen"
-
-[node name="Galaxy_Interact_Text" type="Label" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 496.0
-offset_top = 600.0
-offset_right = 795.0
-offset_bottom = 650.0
-theme_override_font_sizes/font_size = 36
-text = "Press 'F' to Explore"
 
 [node name="Dialogue_Timer" type="Timer" parent="."]
 wait_time = 3.0
