@@ -95,33 +95,25 @@ points = PackedVector2Array(480, 552, 392, 496)
 width = 5.0
 default_color = Color(0.537011, 0.537011, 0.537011, 1)
 
-[node name="Line2D36" type="Line2D" parent="."]
-points = PackedVector2Array(504, 560, 560, 560)
-width = 5.0
-default_color = Color(0.537011, 0.537011, 0.537011, 1)
-
 [node name="Line2D37" type="Line2D" parent="."]
+position = Vector2(-464.085, -30.9)
+scale = Vector2(1.71951, 1.06)
 points = PackedVector2Array(640, 520, 568, 560)
 width = 5.0
 default_color = Color(0.537011, 0.537011, 0.537011, 1)
 
 [node name="Line2D25" type="Line2D" parent="."]
-points = PackedVector2Array(488, 464, 392, 496)
+points = PackedVector2Array(640, 504, 392, 496)
 width = 5.0
 default_color = Color(0.537011, 0.537011, 0.537011, 1)
 
 [node name="Line2D26" type="Line2D" parent="."]
-points = PackedVector2Array(488, 448, 392, 408)
+points = PackedVector2Array(424, 400, 392, 408)
 width = 5.0
 default_color = Color(0.537011, 0.537011, 0.537011, 1)
 
 [node name="Line2D33" type="Line2D" parent="."]
-points = PackedVector2Array(520, 456, 568, 384)
-width = 5.0
-default_color = Color(0.537011, 0.537011, 0.537011, 1)
-
-[node name="Line2D38" type="Line2D" parent="."]
-points = PackedVector2Array(520, 456, 640, 504)
+points = PackedVector2Array(432, 400, 568, 384)
 width = 5.0
 default_color = Color(0.537011, 0.537011, 0.537011, 1)
 
@@ -150,19 +142,19 @@ default_color = Color(0.537011, 0.537011, 0.537011, 1)
 
 [node name="Line2D41" type="Line2D" parent="."]
 position = Vector2(8, 0)
-points = PackedVector2Array(640, 376, 768, 432)
+points = PackedVector2Array(584, 376, 768, 432)
 width = 5.0
 default_color = Color(0.537011, 0.537011, 0.537011, 1)
 
 [node name="Line2D43" type="Line2D" parent="."]
 position = Vector2(8, 0)
-points = PackedVector2Array(640, 376, 696, 320)
+points = PackedVector2Array(584, 376, 696, 320)
 width = 5.0
 default_color = Color(0.537011, 0.537011, 0.537011, 1)
 
 [node name="Line2D42" type="Line2D" parent="."]
 position = Vector2(8, 0)
-points = PackedVector2Array(912, 384, 792, 440)
+points = PackedVector2Array(864, 400, 792, 440)
 width = 5.0
 default_color = Color(0.537011, 0.537011, 0.537011, 1)
 
@@ -233,11 +225,6 @@ points = PackedVector2Array(488, 280, 568, 368)
 width = 5.0
 default_color = Color(0.537011, 0.537011, 0.537011, 1)
 
-[node name="Line2D35" type="Line2D" parent="."]
-points = PackedVector2Array(632, 376, 600, 376)
-width = 5.0
-default_color = Color(0.537011, 0.537011, 0.537011, 1)
-
 [node name="Line2D28" type="Line2D" parent="."]
 points = PackedVector2Array(496, 192, 592, 240)
 width = 5.0
@@ -269,12 +256,27 @@ width = 5.0
 default_color = Color(0.537011, 0.537011, 0.537011, 1)
 
 [node name="Line2D45" type="Line2D" parent="."]
-points = PackedVector2Array(736, 312, 920, 368)
+points = PackedVector2Array(736, 312, 792, 328)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D52" type="Line2D" parent="."]
+points = PackedVector2Array(872, 384, 792, 328)
 width = 5.0
 default_color = Color(0.537011, 0.537011, 0.537011, 1)
 
 [node name="Line2D46" type="Line2D" parent="."]
-points = PackedVector2Array(1056, 384, 952, 376)
+points = PackedVector2Array(1056, 384, 976, 448)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D53" type="Line2D" parent="."]
+points = PackedVector2Array(904, 392, 952, 440)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D54" type="Line2D" parent="."]
+points = PackedVector2Array(728, 512, 952, 456)
 width = 5.0
 default_color = Color(0.537011, 0.537011, 0.537011, 1)
 
@@ -298,17 +300,11 @@ position = Vector2(328, 160)
 [node name="AndGate2" parent="." instance=ExtResource("4_ukuow")]
 position = Vector2(472, 192)
 
-[node name="AndGate7" parent="." instance=ExtResource("4_ukuow")]
-position = Vector2(496, 456)
-
 [node name="AndGate9" parent="." instance=ExtResource("4_ukuow")]
 position = Vector2(648, 512)
 
 [node name="AndGate10" parent="." instance=ExtResource("4_ukuow")]
-position = Vector2(928, 376)
-
-[node name="AndGate6" parent="." instance=ExtResource("4_ukuow")]
-position = Vector2(576, 376)
+position = Vector2(880, 392)
 
 [node name="AndGate3" parent="." instance=ExtResource("4_ukuow")]
 position = Vector2(216, 448)
@@ -331,6 +327,9 @@ position = Vector2(328, 240)
 [node name="OrGate3" parent="." instance=ExtResource("5_3u5vx")]
 position = Vector2(464, 280)
 
+[node name="OrGate10" parent="." instance=ExtResource("5_3u5vx")]
+position = Vector2(568, 376)
+
 [node name="OrGate7" parent="." instance=ExtResource("5_3u5vx")]
 position = Vector2(592, 248)
 
@@ -342,6 +341,9 @@ position = Vector2(384, 608)
 
 [node name="OrGate9" parent="." instance=ExtResource("5_3u5vx")]
 position = Vector2(776, 440)
+
+[node name="OrGate11" parent="." instance=ExtResource("5_3u5vx")]
+position = Vector2(952, 448)
 
 [node name="OrGate6" parent="." instance=ExtResource("5_3u5vx")]
 position = Vector2(368, 496)
@@ -355,20 +357,23 @@ position = Vector2(216, 312)
 [node name="NotGate" parent="." instance=ExtResource("6_rk8cu")]
 position = Vector2(224, 192)
 
-[node name="NotGate2" parent="." instance=ExtResource("6_rk8cu")]
-position = Vector2(640, 376)
-
 [node name="NotGate8" parent="." instance=ExtResource("6_rk8cu")]
 position = Vector2(656, 248)
 
+[node name="NotGate10" parent="." instance=ExtResource("6_rk8cu")]
+position = Vector2(792, 328)
+
 [node name="NotGate4" parent="." instance=ExtResource("6_rk8cu")]
+position = Vector2(288, 568)
+
+[node name="NotGate5" parent="." instance=ExtResource("6_rk8cu")]
 position = Vector2(288, 568)
 
 [node name="NotGate3" parent="." instance=ExtResource("6_rk8cu")]
 position = Vector2(288, 312)
 
-[node name="NotGate5" parent="." instance=ExtResource("6_rk8cu")]
-position = Vector2(560, 560)
+[node name="NotGate9" parent="." instance=ExtResource("6_rk8cu")]
+position = Vector2(432, 400)
 
 [node name="NotGate7" parent="." instance=ExtResource("6_rk8cu")]
 position = Vector2(720, 512)
