@@ -22,6 +22,7 @@ var speed_dragging = false
 
 var updated = false
 
+var total_difference_knob_values = 0
 
 signal win 
 
@@ -42,8 +43,15 @@ func _process(delta):
 		var t = float(i) / (point_count - 1)  # from 0 to 1
 		var x = t * width
 		var y = sin(t * TAU * frequency + phase) * amplitude
-		points.append(Vector2(x, y + height / 2))  # center vertically
+		#points.append(Vector2(x, y + height / 2))  # center vertically
 
+		#  Add glitchy offset
+		var glitch_strength = total_difference_knob_values * 18
+		var jitter_x = randf_range(-glitch_strength, glitch_strength)
+		var jitter_y = randf_range(-glitch_strength, glitch_strength)
+
+		points.append(Vector2(x + jitter_x, y + jitter_y + height / 2))
+	
 	self.points = points
 	if updated && !freq_dragging && !speed_dragging && !amp_dragging:
 		_print_knob_values()
@@ -74,19 +82,22 @@ func _on_freq_knob_dial_rotated(degrees: float, value: float) -> void:
 	adjust_freq_knob_value = value
 	freq_dragging = true
 	updated = true	
-
+	total_difference_knob_values = abs(adjust_freq_knob_value - correct_freq_knob_value) + abs(adjust_speed_knob_value - correct_speed_knob_value) + abs(adjust_amp_knob_value - correct_amp_knob_value)
+	
 func _on_speed_knob_dial_rotated(degrees: float, value: float) -> void:
 	speed = abs(value - correct_speed_knob_value) * 70 + 4
 	adjust_speed_knob_value = value
 	speed_dragging = true
 	updated = true
-
+	total_difference_knob_values = abs(adjust_freq_knob_value - correct_freq_knob_value) + abs(adjust_speed_knob_value - correct_speed_knob_value) + abs(adjust_amp_knob_value - correct_amp_knob_value)
+	
 func _on_amp_knob_dial_rotated(degrees: float, value: float) -> void:
 	amplitude = - abs(value - correct_amp_knob_value) * 150 + 80
 	adjust_amp_knob_value = value
 	amp_dragging = true
 	updated = true
-
+	total_difference_knob_values = abs(adjust_freq_knob_value - correct_freq_knob_value) + abs(adjust_speed_knob_value - correct_speed_knob_value) + abs(adjust_amp_knob_value - correct_amp_knob_value)
+	
 func _check_win():
 	if abs(adjust_freq_knob_value - correct_freq_knob_value) <= margin_error && abs(adjust_amp_knob_value - correct_amp_knob_value) <= margin_error && abs(adjust_speed_knob_value - correct_speed_knob_value) <= margin_error:
 		print("WINNER BETCH")
