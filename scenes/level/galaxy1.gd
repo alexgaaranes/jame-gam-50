@@ -1,10 +1,11 @@
 extends Area2D
 
 var has_player = false
+var is_done = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	GlobalSignals.connect("completed_puzzle_1", is_finish)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -12,7 +13,7 @@ func _process(delta: float) -> void:
 		call_deferred("_load_level1")
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.name == "Player" and not has_player:
+	if body.name == "Player" and not has_player and not is_done:
 		has_player = true
 		GlobalSignals.emit_signal("entered_galaxy_collision")
 
@@ -36,6 +37,8 @@ func _load_level1() -> void:
 	# Set current scene
 	get_tree().current_scene = level1
 
+func is_finish():
+	is_done = true
 
 func _on_body_exited(body):
 	has_player = false

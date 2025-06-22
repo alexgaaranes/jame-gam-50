@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cg146j0irpm0i"
-path="res://.godot/imported/IMG_3843 2.png-672e9162753b769f3be1681526f5f48a.ctex"
+uid="uid://bng1ik6opr4sg"
+path="res://.godot/imported/Back.png-7c58f6edec6aac018b2c616b38d0a808.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/202506 Jame Gam #50/IMG_3843 2.png"
-dest_files=["res://.godot/imported/IMG_3843 2.png-672e9162753b769f3be1681526f5f48a.ctex"]
+source_file="res://assets/Back.png"
+dest_files=["res://.godot/imported/Back.png-7c58f6edec6aac018b2c616b38d0a808.ctex"]
 
 [params]
 

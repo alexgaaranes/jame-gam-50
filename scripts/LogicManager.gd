@@ -31,7 +31,7 @@ func _ready():
 	$Lever8.connect("state_changed", Callable($OrGate4, "set_input").bind(0))
 	$Lever9.connect("state_changed", Callable($OrGate4, "set_input").bind(1))
 	$Lever2.connect("state_changed", Callable($AndGate5, "set_input").bind(1))
-	$NotGate3.connect("state_changed", Callable($AndGate5, "set_input").bind(0))
+	$NotGate3.connect("output_changed", Callable($AndGate5, "set_input").bind(0))
 	$AndGate4.connect("output_changed", Callable($NotGate4, "set_input").bind(0))
 	$NotGate4.connect("output_changed", Callable($OrGate5, "set_input").bind(0))
 	$OrGate4.connect("output_changed", Callable($OrGate5, "set_input").bind(1))
@@ -90,3 +90,5 @@ func show_you_win():
 	timer.paused = true
 	you_win.visible = true
 	GlobalSignals.emit_signal("completed_puzzle_3")
+	GlobalSignals.add_solved()
+	GlobalAudio.play_win_bgm()

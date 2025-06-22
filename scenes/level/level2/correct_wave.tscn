@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ddgnxsqnwkbho"]
 
 [ext_resource type="PackedScene" uid="uid://cvd08pxfwxsti" path="res://scenes/level/level2/wave.tscn" id="1_unnig"]
-[ext_resource type="Script" uid="uid://fiqjupbcx4dt" path="res://scenes/level/level2/correct_wave.gd" id="2_vafph"]
+[ext_resource type="Script" path="res://scenes/level/level2/correct_wave.gd" id="2_vafph"]
 
 [node name="Correct Wave2" type="Node2D"]
 

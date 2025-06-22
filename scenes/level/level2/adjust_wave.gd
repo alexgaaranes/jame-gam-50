@@ -107,6 +107,8 @@ func _check_win():
 		frequency = 5.0
 		emit_signal("win")
 		GlobalSignals.emit_signal("completed_puzzle_2")
+		GlobalSignals.add_solved()
+		GlobalAudio.play_win_bgm()
 
 func _on_freq_knob_dragging(isDragging: bool) -> void:
 	freq_dragging = isDragging

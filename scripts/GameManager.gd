@@ -9,6 +9,7 @@ func _ready():
 	GlobalSignals.connect("completed_puzzle_1", finish_puz1)
 	GlobalSignals.connect("completed_puzzle_2", finish_puz2)
 	GlobalSignals.connect("completed_puzzle_3", finish_puz3)
+	GlobalAudio.play_space_ambient()
 	
 func _process(delta):
 	if puz1_done and puz2_done and puz3_done and not game_win:
