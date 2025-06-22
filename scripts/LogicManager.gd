@@ -1,5 +1,8 @@
 extends Node
 @onready var you_win: CanvasLayer = $YouWin
+@onready var timer: Timer = $Timer
+@onready var timer_text: RichTextLabel = $"Timer Text"
+@onready var game_over: CanvasLayer = $GameOver
 
 func _ready():
 	# setup lahat ng connections haha
@@ -69,6 +72,15 @@ func _ready():
 	$Lever9.emit_signal("state_changed", $Lever9.is_on)
 	you_win.visible = false
 	
+	timer.start(31)
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	timer_text.text = str(int(timer.time_left))
+	if timer.is_stopped():
+		game_over.visible = true
+		
 func show_you_win():
+	timer.paused = true
 	you_win.visible = true
 	

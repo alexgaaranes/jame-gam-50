@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bovspi5dvlsb0"]
+[gd_scene load_steps=12 format=3 uid="uid://bovspi5dvlsb0"]
 
 [ext_resource type="Texture2D" uid="uid://du8m33l7gvebq" path="res://assets/Background.png" id="1_3l3rd"]
 [ext_resource type="Script" uid="uid://chw6b4qcx65vc" path="res://scripts/LogicManager.gd" id="1_3u5vx"]
@@ -8,7 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://brdni50ptwun7" path="res://scenes/level/level3/or_gate.tscn" id="5_3u5vx"]
 [ext_resource type="PackedScene" uid="uid://152dporr1jot" path="res://scenes/level/level3/not_gate.tscn" id="6_rk8cu"]
 [ext_resource type="PackedScene" uid="uid://uwy2fkrmrvq7" path="res://scenes/level/level3/lever.tscn" id="7_brhfm"]
+[ext_resource type="PackedScene" uid="uid://drjhgfwtv6pp7" path="res://scenes/level/ui/timer.tscn" id="9_jepui"]
 [ext_resource type="PackedScene" uid="uid://cdmmd66v4chjy" path="res://scenes/level/ui/you_win.tscn" id="9_rk8cu"]
+[ext_resource type="PackedScene" uid="uid://b3f1m7svlhixv" path="res://scenes/level/ui/game_over.tscn" id="11_1ugym"]
 
 [node name="Level3" type="Node2D"]
 process_mode = 3
@@ -409,5 +411,18 @@ position = Vector2(96, 592)
 [node name="Lever9" parent="." instance=ExtResource("7_brhfm")]
 position = Vector2(96, 656)
 
+[node name="Timer" parent="." instance=ExtResource("9_jepui")]
+
+[node name="Timer Text" type="RichTextLabel" parent="."]
+offset_left = 1000.0
+offset_top = 64.0
+offset_right = 1272.0
+offset_bottom = 160.0
+theme_override_font_sizes/normal_font_size = 50
+horizontal_alignment = 1
+
 [node name="YouWin" parent="." instance=ExtResource("9_rk8cu")]
+visible = false
+
+[node name="GameOver" parent="." instance=ExtResource("11_1ugym")]
 visible = false
