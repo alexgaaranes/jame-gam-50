@@ -17,20 +17,24 @@ scale = Vector2(0.666667, 0.666667)
 texture = ExtResource("2_xn6kt")
 
 [node name="play" type="TextureButton" parent="."]
-offset_left = 296.0
-offset_top = 352.0
-offset_right = 458.0
-offset_bottom = 464.0
+offset_left = 304.0
+offset_top = 376.0
+offset_right = 419.0
+offset_bottom = 456.0
 texture_normal = ExtResource("3_isoef")
 texture_hover = ExtResource("4_xn6kt")
+ignore_texture_size = true
+stretch_mode = 5
 
 [node name="about us" type="TextureButton" parent="."]
-offset_left = 232.0
-offset_top = 448.0
-offset_right = 527.0
-offset_bottom = 547.0
+offset_left = 256.0
+offset_top = 456.0
+offset_right = 470.0
+offset_bottom = 528.0
 texture_normal = ExtResource("5_vovv2")
 texture_hover = ExtResource("6_xn6kt")
+ignore_texture_size = true
+stretch_mode = 5
 
 [node name="ui click" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_isoef")
