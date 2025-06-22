@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Jame Gam 50"
-run/main_scene="uid://cfun2b4mxcblw"
+run/main_scene="uid://dj8lrubiuvbmt"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 

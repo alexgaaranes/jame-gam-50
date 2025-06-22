@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj8lrubiuvbmt"]
+
+[ext_resource type="Script" uid="uid://ba00vvrjvdn5d" path="res://scenes/menu/main_menu.gd" id="1_3rkf3"]
+[ext_resource type="Texture2D" uid="uid://beesdoqh58f1b" path="res://assets/Main Menu.png" id="2_247la"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_3rkf3")
+
+[node name="bg" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+scale = Vector2(0.666667, 0.666667)
+texture = ExtResource("2_247la")
+
+[node name="play" type="TextureButton" parent="."]
+offset_left = 320.0
+offset_top = 368.0
+offset_right = 432.0
+offset_bottom = 432.0
+
+[node name="about us" type="TextureButton" parent="."]
+offset_left = 272.0
+offset_top = 440.0
+offset_right = 480.0
+offset_bottom = 496.0
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="about us" to="." method="_on_about_us_pressed"]
