@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://152dporr1jot"]
+[gd_scene load_steps=0 format=3 uid="uid://152dporr1jot"]
 
 [node name="NotGate" type="Node2D"]
 
