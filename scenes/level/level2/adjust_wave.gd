@@ -7,7 +7,7 @@ extends Line2D
 
 var phase := 0.0
 
-var margin_error = 0.015
+var margin_error = 0.02
 
 var correct_freq_knob_value = randf_range(0.1, 0.9)
 var correct_amp_knob_value = randf_range(0.1, 0.9)

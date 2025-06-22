@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://5rlpqdl26iyt"]
+[gd_scene load_steps=12 format=3 uid="uid://5rlpqdl26iyt"]
 
 [ext_resource type="Script" uid="uid://c6r3hctfd6r5o" path="res://scenes/level/level1/level_1.gd" id="1_mshvf"]
 [ext_resource type="Texture2D" uid="uid://du8m33l7gvebq" path="res://assets/Background.png" id="1_rdidq"]
@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://dccyi75h8ivau" path="res://scenes/level/ui/back.tscn" id="6_ssrwo"]
 [ext_resource type="PackedScene" uid="uid://b3f1m7svlhixv" path="res://scenes/level/ui/game_over.tscn" id="7_fnolb"]
 [ext_resource type="PackedScene" uid="uid://cdmmd66v4chjy" path="res://scenes/level/ui/you_win.tscn" id="8_ssrwo"]
+[ext_resource type="Texture2D" uid="uid://2csm56ov64ax" path="res://assets/Level 1.png" id="9_kw76c"]
+[ext_resource type="Texture2D" uid="uid://dg75uwj78c6xf" path="res://assets/Circuit Complete !.png" id="10_yiwax"]
+[ext_resource type="AudioStream" uid="uid://cnq0hjnndcbeb" path="res://assets/audio/fail(puzzle).mp3" id="11_gfucf"]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_mshvf")
@@ -263,14 +266,6 @@ scale = Vector2(2.75, 2.75)
 position = Vector2(1168, 528)
 scale = Vector2(0.325, 0.325)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 574.0
-offset_top = 14.0
-offset_right = 918.0
-offset_bottom = 126.0
-theme_override_font_sizes/normal_font_size = 50
-text = "level 1"
-
 [node name="Player_level1" parent="." instance=ExtResource("4_mshvf")]
 position = Vector2(40, 80)
 
@@ -281,6 +276,22 @@ visible = false
 
 [node name="YouWin" parent="." instance=ExtResource("8_ssrwo")]
 visible = false
+
+[node name="title" type="Sprite2D" parent="."]
+position = Vector2(640, 56)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("9_kw76c")
+
+[node name="Win Msg" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Win Msg" type="Sprite2D" parent="Win Msg"]
+position = Vector2(672, 296)
+scale = Vector2(1.21667, 1.21667)
+texture = ExtResource("10_yiwax")
+
+[node name="gameoveraudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_gfucf")
 
 [connection signal="lose" from="Player_level1" to="." method="_on_player_level_1_lose"]
 [connection signal="ready" from="Player_level1" to="Player_level1" method="_on_ready"]

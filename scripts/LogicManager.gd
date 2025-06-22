@@ -3,6 +3,8 @@ extends Node
 @onready var timer: Timer = $Timer
 @onready var timer_text: RichTextLabel = $"Timer Text"
 @onready var game_over: CanvasLayer = $GameOver
+@onready var win_msg: CanvasLayer = $"Win Msg"
+@onready var gameoveraudio: AudioStreamPlayer = $gameoveraudio
 
 var has_won = false
 
@@ -81,6 +83,7 @@ func _process(delta: float) -> void:
 	timer_text.text = str(int(timer.time_left))
 	if timer.is_stopped():
 		game_over.visible = true
+		gameoveraudio.play()
 	if $Bulb.is_on and $Bulb2.is_on and $Bulb3.is_on and not has_won:
 		show_you_win()
 		# Update some thing in the map
@@ -89,6 +92,7 @@ func show_you_win():
 	has_won = true
 	timer.paused = true
 	you_win.visible = true
+	win_msg.visible = true
 	GlobalSignals.emit_signal("completed_puzzle_3")
 	GlobalSignals.add_solved()
 	GlobalAudio.play_win_bgm()

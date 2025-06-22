@@ -2,6 +2,9 @@ extends Control
 
 var on_start = true
 var dialogue = 0
+@onready var explore: Sprite2D = $explore
+@onready var listen: Sprite2D = $listen
+
 
 func _ready():
 	GlobalSignals.connect("entered_whale_collision", show_whale_interact_text)
@@ -18,16 +21,21 @@ func _process(delta):
 		on_start = false
 
 func show_whale_interact_text():
-	$Whale_Interact_Text.visible = true
-
+	#$Whale_Interact_Text.visible = true
+	listen.visible = true
+	
 func show_galaxy_interact_text():
-	$Galaxy_Interact_Text.visible = true
+	#$Galaxy_Interact_Text.visible = true
+	explore.visible = true
 
 func hide_whale_interact_text():
-	$Whale_Interact_Text.visible = false
+	#$Whale_Interact_Text.visible = false
+	listen.visible = false
 
 func hide_galaxy_interact_text():
-	$Galaxy_Interact_Text.visible = false
+	#$Galaxy_Interact_Text.visible = false
+	explore.visible = false
+	
 
 func show_whale_dialogue():
 	hide_whale_interact_text()
