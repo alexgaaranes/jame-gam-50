@@ -24,3 +24,4 @@ func _on_player_level_1_lose() -> void:
 func _on_player_level_1_win() -> void:
 	player_level_1.velocity = Vector2.ZERO
 	you_win.visible = true
+	GlobalSignals.emit_signal("completed_puzzle_1")

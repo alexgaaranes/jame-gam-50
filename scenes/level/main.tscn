@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://cfun2b4mxcblw"]
+[gd_scene load_steps=11 format=3 uid="uid://cfun2b4mxcblw"]
 
+[ext_resource type="Script" uid="uid://btbhqx4hv1nob" path="res://scripts/GameManager.gd" id="1_6ulxj"]
 [ext_resource type="Texture2D" uid="uid://du8m33l7gvebq" path="res://assets/Background.png" id="1_64aob"]
 [ext_resource type="PackedScene" uid="uid://kg3kqfg2wqas" path="res://scenes/whale/whale.tscn" id="1_855hj"]
 [ext_resource type="PackedScene" uid="uid://kk2modep8asl" path="res://scenes/galaxy/galaxy.tscn" id="1_iernp"]
@@ -16,6 +17,7 @@ glow_intensity = 1.0
 glow_bloom = 0.45
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_6ulxj")
 
 [node name="Space" type="Sprite2D" parent="."]
 position = Vector2(960, 536)

@@ -4,3 +4,7 @@ signal entered_whale_collision
 signal exit_whale_collision
 signal entered_galaxy_collision
 signal exit_galaxy_collision
+
+signal completed_puzzle_1
+signal completed_puzzle_2
+signal completed_puzzle_3

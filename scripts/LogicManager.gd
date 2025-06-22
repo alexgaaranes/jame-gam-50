@@ -1,6 +1,8 @@
 extends Node
 @onready var you_win: CanvasLayer = $YouWin
 
+var has_won = false
+
 func _ready():
 	# setup lahat ng connections haha
 	$Lever.connect("state_changed", Callable($AndGate, "set_input").bind(0))
@@ -70,5 +72,11 @@ func _ready():
 	you_win.visible = false
 	
 func show_you_win():
+	has_won = true
 	you_win.visible = true
-	
+	GlobalSignals.emit_signal("completed_puzzle_3")
+
+func _process(delta):
+	if $Bulb.is_on and $Bulb2.is_on and $Bulb3.is_on and not has_won:
+		show_you_win()
+		# Update some thing in the map
