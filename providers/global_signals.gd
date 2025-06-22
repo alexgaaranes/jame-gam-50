@@ -4,3 +4,5 @@ signal entered_whale_collision
 signal exit_whale_collision
 signal entered_galaxy_collision
 signal exit_galaxy_collision
+signal turn_bulb_on
+signal turn_bulb_off

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b2ryemasabral"]
+
+[node name="AndGate" type="Node2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.115529, 0.573226, 3.85046e-07, 1)
+polygon = PackedVector2Array(-16, -16, -16, 16, 8, 16, 24, 8, 32, 0, 24, -8, 8, -16)

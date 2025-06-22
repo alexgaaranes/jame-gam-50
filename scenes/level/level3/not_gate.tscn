@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://152dporr1jot"]
+
+[node name="NotGate" type="Node2D"]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.64456, 0.00600288, 2.88785e-07, 1)
+polygon = PackedVector2Array(-16, -16, -16, 16, 16, 0)

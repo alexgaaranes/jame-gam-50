@@ -53,5 +53,8 @@ environment = SubResource("Environment_2hqms")
 [node name="Hud" parent="HudCanvas" instance=ExtResource("8_1bkat")]
 
 [connection signal="body_entered" from="Galaxy" to="Galaxy" method="_on_body_entered"]
+[connection signal="body_exited" from="Galaxy" to="Galaxy" method="_on_body_exited"]
 [connection signal="body_entered" from="Galaxy2" to="Galaxy2" method="_on_body_entered"]
+[connection signal="body_exited" from="Galaxy2" to="Galaxy2" method="_on_body_exited"]
 [connection signal="body_entered" from="Galaxy3" to="Galaxy3" method="_on_body_entered"]
+[connection signal="body_exited" from="Galaxy3" to="Galaxy3" method="_on_body_exited"]

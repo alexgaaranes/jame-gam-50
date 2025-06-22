@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://bovspi5dvlsb0"]
+[gd_scene load_steps=8 format=3 uid="uid://bovspi5dvlsb0"]
 
 [ext_resource type="Texture2D" uid="uid://du8m33l7gvebq" path="res://assets/Background.png" id="1_3l3rd"]
 [ext_resource type="PackedScene" uid="uid://dccyi75h8ivau" path="res://scenes/level/ui/back.tscn" id="2_3l3rd"]
+[ext_resource type="PackedScene" uid="uid://b62alsgwafu7u" path="res://scenes/level/level3/bulb.tscn" id="3_ymasj"]
+[ext_resource type="PackedScene" uid="uid://b2ryemasabral" path="res://scenes/level/level3/and_gate.tscn" id="4_ukuow"]
+[ext_resource type="PackedScene" uid="uid://brdni50ptwun7" path="res://scenes/level/level3/or_gate.tscn" id="5_3u5vx"]
+[ext_resource type="PackedScene" uid="uid://152dporr1jot" path="res://scenes/level/level3/not_gate.tscn" id="6_rk8cu"]
+[ext_resource type="PackedScene" uid="uid://uwy2fkrmrvq7" path="res://scenes/level/level3/lever.tscn" id="7_brhfm"]
 
 [node name="Level3" type="Node2D"]
 process_mode = 3
@@ -11,12 +16,382 @@ position = Vector2(640, 360)
 scale = Vector2(0.666667, 0.666667)
 texture = ExtResource("1_3l3rd")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 472.0
-offset_top = 296.0
-offset_right = 816.0
-offset_bottom = 408.0
-theme_override_font_sizes/normal_font_size = 50
-text = "level 3 sheesh"
-
 [node name="Back" parent="." instance=ExtResource("2_3l3rd")]
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(128, 144, 312, 152)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D2" type="Line2D" parent="."]
+points = PackedVector2Array(120, 208, 208, 192)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D3" type="Line2D" parent="."]
+points = PackedVector2Array(320, 168, 232, 192)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D5" type="Line2D" parent="."]
+points = PackedVector2Array(328, 232, 240, 192)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D6" type="Line2D" parent="."]
+points = PackedVector2Array(216, 304, 120, 272)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D49" type="Line2D" parent="."]
+points = PackedVector2Array(328, 248, 120, 272)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D7" type="Line2D" parent="."]
+points = PackedVector2Array(224, 320, 112, 336)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D8" type="Line2D" parent="."]
+points = PackedVector2Array(240, 312, 280, 312)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D9" type="Line2D" parent="."]
+points = PackedVector2Array(464, 288, 296, 312)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D11" type="Line2D" parent="."]
+points = PackedVector2Array(360, 400, 120, 400)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D12" type="Line2D" parent="."]
+points = PackedVector2Array(208, 440, 120, 456)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D13" type="Line2D" parent="."]
+points = PackedVector2Array(240, 448, 360, 416)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D22" type="Line2D" parent="."]
+points = PackedVector2Array(240, 448, 368, 488)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D24" type="Line2D" parent="."]
+points = PackedVector2Array(480, 552, 392, 496)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D36" type="Line2D" parent="."]
+points = PackedVector2Array(504, 560, 560, 560)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D37" type="Line2D" parent="."]
+points = PackedVector2Array(640, 520, 568, 560)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D25" type="Line2D" parent="."]
+points = PackedVector2Array(488, 464, 392, 496)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D26" type="Line2D" parent="."]
+points = PackedVector2Array(488, 448, 392, 408)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D33" type="Line2D" parent="."]
+points = PackedVector2Array(520, 456, 568, 384)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D38" type="Line2D" parent="."]
+points = PackedVector2Array(520, 456, 640, 504)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D39" type="Line2D" parent="."]
+points = PackedVector2Array(712, 512, 664, 512)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D40" type="Line2D" parent="."]
+position = Vector2(8, 0)
+points = PackedVector2Array(712, 512, 768, 448)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D47" type="Line2D" parent="."]
+position = Vector2(8, 0)
+points = PackedVector2Array(712, 512, 912, 576)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D48" type="Line2D" parent="."]
+position = Vector2(8, 0)
+points = PackedVector2Array(1048, 584, 912, 576)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D41" type="Line2D" parent="."]
+position = Vector2(8, 0)
+points = PackedVector2Array(640, 376, 768, 432)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D43" type="Line2D" parent="."]
+position = Vector2(8, 0)
+points = PackedVector2Array(640, 376, 696, 320)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D42" type="Line2D" parent="."]
+position = Vector2(8, 0)
+points = PackedVector2Array(912, 384, 792, 440)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D14" type="Line2D" parent="."]
+points = PackedVector2Array(120, 528, 208, 552)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D15" type="Line2D" parent="."]
+points = PackedVector2Array(120, 592, 208, 568)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D18" type="Line2D" parent="."]
+points = PackedVector2Array(280, 568, 240, 560)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D19" type="Line2D" parent="."]
+points = PackedVector2Array(296, 568, 384, 600)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D23" type="Line2D" parent="."]
+points = PackedVector2Array(296, 568, 368, 504)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D21" type="Line2D" parent="."]
+points = PackedVector2Array(480, 568, 408, 608)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D20" type="Line2D" parent="."]
+points = PackedVector2Array(240, 656, 384, 616)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D16" type="Line2D" parent="."]
+points = PackedVector2Array(120, 592, 216, 648)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D17" type="Line2D" parent="."]
+points = PackedVector2Array(120, 664, 216, 664)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D10" type="Line2D" parent="."]
+points = PackedVector2Array(464, 272, 352, 240)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D50" type="Line2D" parent="."]
+position = Vector2(-8.53281, 0)
+scale = Vector2(1.02459, 1)
+points = PackedVector2Array(461.192, 200, 352, 240)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D27" type="Line2D" parent="."]
+points = PackedVector2Array(488, 280, 592, 256)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D34" type="Line2D" parent="."]
+points = PackedVector2Array(488, 280, 568, 368)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D35" type="Line2D" parent="."]
+points = PackedVector2Array(632, 376, 600, 376)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D28" type="Line2D" parent="."]
+points = PackedVector2Array(496, 192, 592, 240)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D29" type="Line2D" parent="."]
+points = PackedVector2Array(648, 248, 616, 248)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D30" type="Line2D" parent="."]
+points = PackedVector2Array(656, 248, 904, 200)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D44" type="Line2D" parent="."]
+points = PackedVector2Array(656, 248, 704, 304)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D32" type="Line2D" parent="."]
+points = PackedVector2Array(1056, 216, 936, 208)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D31" type="Line2D" parent="."]
+points = PackedVector2Array(736, 312, 912, 216)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D45" type="Line2D" parent="."]
+points = PackedVector2Array(736, 312, 920, 368)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D46" type="Line2D" parent="."]
+points = PackedVector2Array(1056, 384, 952, 376)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Line2D4" type="Line2D" parent="."]
+points = PackedVector2Array(352, 160, 464, 184)
+width = 5.0
+default_color = Color(0.537011, 0.537011, 0.537011, 1)
+
+[node name="Bulb" parent="." instance=ExtResource("3_ymasj")]
+position = Vector2(1056, 200)
+
+[node name="Bulb2" parent="." instance=ExtResource("3_ymasj")]
+position = Vector2(1056, 568)
+
+[node name="Bulb3" parent="." instance=ExtResource("3_ymasj")]
+position = Vector2(1056, 368)
+
+[node name="AndGate" parent="." instance=ExtResource("4_ukuow")]
+position = Vector2(328, 160)
+
+[node name="AndGate2" parent="." instance=ExtResource("4_ukuow")]
+position = Vector2(472, 192)
+
+[node name="AndGate7" parent="." instance=ExtResource("4_ukuow")]
+position = Vector2(496, 456)
+
+[node name="AndGate9" parent="." instance=ExtResource("4_ukuow")]
+position = Vector2(648, 512)
+
+[node name="AndGate10" parent="." instance=ExtResource("4_ukuow")]
+position = Vector2(928, 376)
+
+[node name="AndGate6" parent="." instance=ExtResource("4_ukuow")]
+position = Vector2(576, 376)
+
+[node name="AndGate3" parent="." instance=ExtResource("4_ukuow")]
+position = Vector2(216, 448)
+
+[node name="AndGate4" parent="." instance=ExtResource("4_ukuow")]
+position = Vector2(216, 560)
+
+[node name="AndGate5" parent="." instance=ExtResource("4_ukuow")]
+position = Vector2(368, 408)
+
+[node name="AndGate11" parent="." instance=ExtResource("4_ukuow")]
+position = Vector2(712, 312)
+
+[node name="AndGate8" parent="." instance=ExtResource("4_ukuow")]
+position = Vector2(488, 560)
+
+[node name="OrGate" parent="." instance=ExtResource("5_3u5vx")]
+position = Vector2(328, 240)
+
+[node name="OrGate3" parent="." instance=ExtResource("5_3u5vx")]
+position = Vector2(464, 280)
+
+[node name="OrGate7" parent="." instance=ExtResource("5_3u5vx")]
+position = Vector2(592, 248)
+
+[node name="OrGate8" parent="." instance=ExtResource("5_3u5vx")]
+position = Vector2(912, 208)
+
+[node name="OrGate5" parent="." instance=ExtResource("5_3u5vx")]
+position = Vector2(384, 608)
+
+[node name="OrGate9" parent="." instance=ExtResource("5_3u5vx")]
+position = Vector2(776, 440)
+
+[node name="OrGate6" parent="." instance=ExtResource("5_3u5vx")]
+position = Vector2(368, 496)
+
+[node name="OrGate4" parent="." instance=ExtResource("5_3u5vx")]
+position = Vector2(216, 656)
+
+[node name="OrGate2" parent="." instance=ExtResource("5_3u5vx")]
+position = Vector2(216, 312)
+
+[node name="NotGate" parent="." instance=ExtResource("6_rk8cu")]
+position = Vector2(224, 192)
+
+[node name="NotGate2" parent="." instance=ExtResource("6_rk8cu")]
+position = Vector2(640, 376)
+
+[node name="NotGate8" parent="." instance=ExtResource("6_rk8cu")]
+position = Vector2(656, 248)
+
+[node name="NotGate4" parent="." instance=ExtResource("6_rk8cu")]
+position = Vector2(288, 568)
+
+[node name="NotGate3" parent="." instance=ExtResource("6_rk8cu")]
+position = Vector2(288, 312)
+
+[node name="NotGate5" parent="." instance=ExtResource("6_rk8cu")]
+position = Vector2(560, 560)
+
+[node name="NotGate7" parent="." instance=ExtResource("6_rk8cu")]
+position = Vector2(720, 512)
+
+[node name="NotGate6" parent="." instance=ExtResource("6_rk8cu")]
+position = Vector2(928, 576)
+
+[node name="Lever" parent="." instance=ExtResource("7_brhfm")]
+position = Vector2(96, 144)
+
+[node name="Lever2" parent="." instance=ExtResource("7_brhfm")]
+position = Vector2(96, 400)
+
+[node name="Lever3" parent="." instance=ExtResource("7_brhfm")]
+position = Vector2(96, 336)
+
+[node name="Lever4" parent="." instance=ExtResource("7_brhfm")]
+position = Vector2(96, 272)
+
+[node name="Lever5" parent="." instance=ExtResource("7_brhfm")]
+position = Vector2(96, 208)
+
+[node name="Lever6" parent="." instance=ExtResource("7_brhfm")]
+position = Vector2(96, 464)
+
+[node name="Lever7" parent="." instance=ExtResource("7_brhfm")]
+position = Vector2(96, 528)
+
+[node name="Lever8" parent="." instance=ExtResource("7_brhfm")]
+position = Vector2(96, 592)
+
+[node name="Lever9" parent="." instance=ExtResource("7_brhfm")]
+position = Vector2(96, 656)

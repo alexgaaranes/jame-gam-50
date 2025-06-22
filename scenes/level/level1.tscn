@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://g53nicbg4rqp"]
+
+[ext_resource type="Texture2D" uid="uid://du8m33l7gvebq" path="res://assets/Background.png" id="1_nggc0"]
+[ext_resource type="Script" path="res://scenes/level/level_back_button.gd" id="2_gvmle"]
+
+[node name="Level1" type="Node2D"]
+process_mode = 3
+
+[node name="space" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+scale = Vector2(0.666667, 0.666667)
+texture = ExtResource("1_nggc0")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 472.0
+offset_top = 296.0
+offset_right = 816.0
+offset_bottom = 408.0
+theme_override_font_sizes/normal_font_size = 50
+text = "level 1 boom"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 48.0
+offset_top = 34.0
+offset_right = 178.0
+offset_bottom = 83.0
+text = "BACK"
+script = ExtResource("2_gvmle")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
