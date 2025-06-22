@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dikyiofeavm15"]
+[gd_scene load_steps=10 format=3 uid="uid://dikyiofeavm15"]
 
 [ext_resource type="Texture2D" uid="uid://du8m33l7gvebq" path="res://assets/Background.png" id="1_q0vuy"]
 [ext_resource type="Script" uid="uid://b77mvrsyxfr16" path="res://scenes/level/level2/level_2.gd" id="1_vjjvc"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://4axunld1eoys" path="res://providers/fkeyzKnob-722325ebd60e0ee62ca20da56863c9b61790c7ac/addons/fkeyz_knob/knob.tscn" id="4_jgnos"]
 [ext_resource type="PackedScene" uid="uid://cisxisrdcaqui" path="res://scenes/level/level2/adjust_wave.tscn" id="4_tick8"]
 [ext_resource type="PackedScene" uid="uid://cdmmd66v4chjy" path="res://scenes/level/ui/you_win.tscn" id="7_iakny"]
+[ext_resource type="PackedScene" uid="uid://drjhgfwtv6pp7" path="res://scenes/level/ui/timer.tscn" id="7_p170t"]
 [ext_resource type="PackedScene" uid="uid://b3f1m7svlhixv" path="res://scenes/level/ui/game_over.tscn" id="8_iakny"]
 
 [node name="Level2" type="Node2D"]
@@ -80,8 +81,7 @@ theme_override_font_sizes/normal_font_size = 30
 text = "speed"
 horizontal_alignment = 1
 
-[node name="Timer" type="Timer" parent="."]
-one_shot = true
+[node name="Timer" parent="." instance=ExtResource("7_p170t")]
 
 [node name="Timer Text" type="RichTextLabel" parent="."]
 offset_left = 1000.0

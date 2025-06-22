@@ -1,5 +1,8 @@
 extends Node
 @onready var you_win: CanvasLayer = $YouWin
+@onready var timer: Timer = $Timer
+@onready var timer_text: RichTextLabel = $"Timer Text"
+@onready var game_over: CanvasLayer = $GameOver
 
 var has_won = false
 
@@ -71,12 +74,19 @@ func _ready():
 	$Lever9.emit_signal("state_changed", $Lever9.is_on)
 	you_win.visible = false
 	
-func show_you_win():
-	has_won = true
-	you_win.visible = true
-	GlobalSignals.emit_signal("completed_puzzle_3")
+	timer.start(31)
 
-func _process(delta):
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	timer_text.text = str(int(timer.time_left))
+	if timer.is_stopped():
+		game_over.visible = true
 	if $Bulb.is_on and $Bulb2.is_on and $Bulb3.is_on and not has_won:
 		show_you_win()
 		# Update some thing in the map
+		
+func show_you_win():
+	has_won = true
+	timer.paused = true
+	you_win.visible = true
+	GlobalSignals.emit_signal("completed_puzzle_3")
