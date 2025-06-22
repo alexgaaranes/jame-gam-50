@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b3f1m7svlhixv"]
+[gd_scene load_steps=8 format=3 uid="uid://b3f1m7svlhixv"]
 
 [ext_resource type="Script" uid="uid://ob5fvp74c28v" path="res://scenes/level/ui/game_over_or_win.gd" id="1_7k7xh"]
 [ext_resource type="Texture2D" uid="uid://d1ypu37hfpdb8" path="res://assets/return1.png" id="2_710cr"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dmiyy7ut3kov0" path="res://assets/Play Again.png" id="4_0ouhu"]
 [ext_resource type="Texture2D" uid="uid://brvryrldxhi2i" path="res://assets/Play Again2.png" id="5_jkni4"]
 [ext_resource type="Texture2D" uid="uid://dri8gtkvv0u75" path="res://assets/GAME OVER.png" id="6_1d8h6"]
+[ext_resource type="AudioStream" uid="uid://cnq0hjnndcbeb" path="res://assets/audio/fail(puzzle).mp3" id="7_mkcpr"]
 
 [node name="GameOver" type="CanvasLayer"]
 script = ExtResource("1_7k7xh")
@@ -57,6 +58,9 @@ stretch_mode = 5
 position = Vector2(640, 272)
 scale = Vector2(1.32051, 1.32051)
 texture = ExtResource("6_1d8h6")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_mkcpr")
 
 [connection signal="pressed" from="return" to="." method="_on_return_pressed"]
 [connection signal="pressed" from="Play Again" to="." method="_on_play_again_pressed"]

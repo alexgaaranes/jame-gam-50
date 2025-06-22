@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bovspi5dvlsb0"]
+[gd_scene load_steps=15 format=3 uid="uid://bovspi5dvlsb0"]
 
 [ext_resource type="Texture2D" uid="uid://du8m33l7gvebq" path="res://assets/Background.png" id="1_3l3rd"]
 [ext_resource type="Script" uid="uid://chw6b4qcx65vc" path="res://scripts/LogicManager.gd" id="1_3u5vx"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://b3f1m7svlhixv" path="res://scenes/level/ui/game_over.tscn" id="11_1ugym"]
 [ext_resource type="Texture2D" uid="uid://d0dfliwvd3lsx" path="res://assets/Level 3.png" id="12_1ugym"]
 [ext_resource type="Texture2D" uid="uid://bk2ylhc83k072" path="res://assets/Logic Gates fixed !.png" id="13_cif1u"]
+[ext_resource type="AudioStream" uid="uid://cnq0hjnndcbeb" path="res://assets/audio/fail(puzzle).mp3" id="14_tvoi8"]
 
 [node name="Level3" type="Node2D"]
 process_mode = 3
@@ -441,3 +442,6 @@ visible = false
 position = Vector2(672, 296)
 scale = Vector2(1.21667, 1.21667)
 texture = ExtResource("13_cif1u")
+
+[node name="gameoveraudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_tvoi8")

@@ -6,6 +6,7 @@ extends Node2D
 @onready var game_over: CanvasLayer = $GameOver
 var win = false
 @onready var win_msg: CanvasLayer = $"Win Msg"
+@onready var gameoveraudio: AudioStreamPlayer = $gameoveraudio
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,6 +22,7 @@ func _process(delta: float) -> void:
 	
 func times_up() -> void:
 	game_over.visible = true
+	gameoveraudio.play()
 
 func _on_adjust_wave_win() -> void:
 	win = true
