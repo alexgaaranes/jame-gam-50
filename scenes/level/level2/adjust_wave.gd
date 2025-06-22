@@ -46,7 +46,7 @@ func _process(delta):
 		#points.append(Vector2(x, y + height / 2))  # center vertically
 
 		#  Add glitchy offset
-		var glitch_strength = total_difference_knob_values * 18
+		var glitch_strength = total_difference_knob_values * 20
 		var jitter_x = randf_range(-glitch_strength, glitch_strength)
 		var jitter_y = randf_range(-glitch_strength, glitch_strength)
 
