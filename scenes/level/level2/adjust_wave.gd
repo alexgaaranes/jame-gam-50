@@ -90,6 +90,9 @@ func _on_amp_knob_dial_rotated(degrees: float, value: float) -> void:
 func _check_win():
 	if abs(adjust_freq_knob_value - correct_freq_knob_value) <= margin_error && abs(adjust_amp_knob_value - correct_amp_knob_value) <= margin_error && abs(adjust_speed_knob_value - correct_speed_knob_value) <= margin_error:
 		print("WINNER BETCH")
+		speed = 4.0
+		amplitude = 80.0
+		frequency = 5.0
 		emit_signal("win")
 
 func _on_freq_knob_dragging(isDragging: bool) -> void:
