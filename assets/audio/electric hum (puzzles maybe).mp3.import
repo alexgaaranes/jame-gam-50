@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ol6yvnkoxu4o"
+path="res://.godot/imported/electric hum (puzzles maybe).mp3-f2c1357f3522ff8e7ff794fc914abb58.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/electric hum (puzzles maybe).mp3"
+dest_files=["res://.godot/imported/electric hum (puzzles maybe).mp3-f2c1357f3522ff8e7ff794fc914abb58.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

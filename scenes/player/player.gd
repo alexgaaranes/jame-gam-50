@@ -12,6 +12,9 @@ func _physics_process(delta: float) -> void:
 
 	var direction = ""
 	var flip = false
+	
+	if xdirection or ydirection:
+		GlobalAudio.play_rocket()
 
 	# Apply movement
 	if xdirection:

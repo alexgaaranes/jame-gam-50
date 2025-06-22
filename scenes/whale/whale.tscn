@@ -1,17 +1,20 @@
-[gd_scene load_steps=8 format=3 uid="uid://kg3kqfg2wqas"]
+[gd_scene load_steps=10 format=3 uid="uid://kg3kqfg2wqas"]
 
 [ext_resource type="Texture2D" uid="uid://dapwehj0vllfd" path="res://assets/Whale_Stars.png" id="1_3fjcf"]
 [ext_resource type="Script" uid="uid://cym2bpxyshff3" path="res://scripts/whale.gd" id="1_ab3s7"]
+[ext_resource type="Script" uid="uid://djknwgrosw0w8" path="res://scripts/state_whale.gd" id="1_axwbo"]
 [ext_resource type="Texture2D" uid="uid://dxyyl0dowklgo" path="res://assets/Whale_Glow.png" id="1_geyiy"]
 [ext_resource type="Texture2D" uid="uid://2nnst5isys2e" path="res://assets/Whale.png" id="2_3fjcf"]
 [ext_resource type="Script" uid="uid://i1wkqqvmt56u" path="res://scripts/stars.gd" id="2_mo2fg"]
 [ext_resource type="Script" uid="uid://yh1f0m11c0e1" path="res://scripts/whale_collision.gd" id="6_hwsnh"]
+[ext_resource type="Texture2D" uid="uid://x315ddhvp7vg" path="res://assets/whale_modified.PNG" id="6_t0f4v"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mo2fg"]
 radius = 163.0
 height = 566.0
 
 [node name="Whale" type="Node2D"]
+script = ExtResource("1_axwbo")
 
 [node name="Stars" type="Sprite2D" parent="."]
 texture = ExtResource("1_3fjcf")
@@ -24,6 +27,10 @@ script = ExtResource("1_ab3s7")
 [node name="Body" type="Sprite2D" parent="."]
 texture = ExtResource("2_3fjcf")
 script = ExtResource("1_ab3s7")
+
+[node name="Improved_Body" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("6_t0f4v")
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("6_hwsnh")

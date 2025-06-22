@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bfchvfr2yseek"]
+[gd_scene load_steps=16 format=3 uid="uid://bfchvfr2yseek"]
 
 [ext_resource type="Script" uid="uid://btbhqx4hv1nob" path="res://scripts/GameManager.gd" id="1_ig4jx"]
 [ext_resource type="Texture2D" uid="uid://du8m33l7gvebq" path="res://assets/Background.png" id="2_pn0ym"]
@@ -10,6 +10,10 @@
 [ext_resource type="Script" uid="uid://bm4ch6gyn6jl4" path="res://scenes/level/galaxy3.gd" id="7_g280g"]
 [ext_resource type="PackedScene" uid="uid://esud7bwuxrjp" path="res://scenes/player/player.tscn" id="8_bften"]
 [ext_resource type="PackedScene" uid="uid://ht2ucbxw6pqq" path="res://scenes/hud/hud.tscn" id="9_mr15t"]
+[ext_resource type="Texture2D" uid="uid://8cbjnsf5soyh" path="res://assets/blue_whale.PNG" id="11_g35fm"]
+[ext_resource type="Texture2D" uid="uid://cvuhsbokyoy4g" path="res://assets/brown_whale.PNG" id="12_g280g"]
+[ext_resource type="Texture2D" uid="uid://dsn21er6ipt4q" path="res://assets/orange_whale.PNG" id="13_bften"]
+[ext_resource type="Texture2D" uid="uid://dxd80r7kbesvk" path="res://assets/resonating_whale.PNG" id="14_mr15t"]
 
 [sub_resource type="Environment" id="Environment_2hqms"]
 background_mode = 3
@@ -37,6 +41,32 @@ texture = ExtResource("3_pn0ym")
 
 [node name="Whale" parent="." instance=ExtResource("3_0o7gw")]
 position = Vector2(888, 496)
+
+[node name="Other_Whale1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1728, 184)
+texture = ExtResource("11_g35fm")
+
+[node name="Other_Whale2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1632, 888)
+rotation = 0.332129
+texture = ExtResource("12_g280g")
+
+[node name="Other_Whale3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(336, 936)
+rotation = -0.194106
+scale = Vector2(1, 1)
+texture = ExtResource("13_bften")
+flip_h = true
+
+[node name="Other_Whale4" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(184, 96)
+rotation = 0.414558
+texture = ExtResource("14_mr15t")
+flip_h = true
 
 [node name="Galaxy" parent="." instance=ExtResource("4_d3kax")]
 position = Vector2(-264, 408)

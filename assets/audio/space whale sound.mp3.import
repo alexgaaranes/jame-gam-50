@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dgspnxq7exe5s"
+path="res://.godot/imported/space whale sound.mp3-6901bd684a54bc53e81049326ab8d828.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/space whale sound.mp3"
+dest_files=["res://.godot/imported/space whale sound.mp3-6901bd684a54bc53e81049326ab8d828.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

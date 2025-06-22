@@ -12,10 +12,15 @@ func _ready():
 	GlobalAudio.play_space_ambient()
 	
 func _process(delta):
-	if puz1_done and puz2_done and puz3_done and not game_win:
+	if GlobalSignals.number_of_solved >= 3 and not game_win:
 		game_win = true
-		# overall win logic
-
+		$Other_Whale1.visible = true
+		$Other_Whale2.visible = true
+		$Other_Whale3.visible = true
+		$Other_Whale4.visible = true
+		
+		# Zoom out the camera
+		$Player/Camera2D.zoom = Vector2(0.75, 0.75)
 # puzzle complete toggle
 func finish_puz1():
 	puz1_done = true

@@ -31,6 +31,76 @@ offset_bottom = 650.0
 theme_override_font_sizes/font_size = 36
 text = "Press 'F' to Listen"
 
+[node name="Whale_Dialogue2" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 408.0
+offset_top = 592.0
+offset_right = 918.0
+offset_bottom = 642.0
+theme_override_font_sizes/font_size = 36
+text = "Oh ! You can understand me?"
+
+[node name="Whale_Dialogue3" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 432.0
+offset_top = 592.0
+offset_right = 942.0
+offset_bottom = 642.0
+theme_override_font_sizes/font_size = 36
+text = "Thank you for helping me."
+
+[node name="Whale_Dialogue4" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 384.0
+offset_top = 600.0
+offset_right = 950.0
+offset_bottom = 650.0
+theme_override_font_sizes/font_size = 36
+text = "Because of you, I found my voice"
+
+[node name="Whale_Dialogue5" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 384.0
+offset_top = 600.0
+offset_right = 950.0
+offset_bottom = 650.0
+theme_override_font_sizes/font_size = 36
+text = "I found others to resonate with"
+
+[node name="Whale_Dialogue6" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 432.0
+offset_top = 600.0
+offset_right = 998.0
+offset_bottom = 650.0
+theme_override_font_sizes/font_size = 36
+text = "The translator worked !!"
+
+[node name="Whale_Dialogue7" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 256.0
+offset_top = 592.0
+offset_right = 1078.0
+offset_bottom = 642.0
+theme_override_font_sizes/font_size = 36
+text = "Look at all the whale friends who came to visit !"
+
+[node name="Whale_Dialogue8" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 440.0
+offset_top = 592.0
+offset_right = 1262.0
+offset_bottom = 642.0
+theme_override_font_sizes/font_size = 36
+text = "Thank you so much <33"
+
 [node name="Galaxy_Interact_Text" type="Label" parent="."]
 visible = false
 layout_mode = 0
@@ -43,5 +113,47 @@ text = "Press 'F' to Explore"
 
 [node name="Dialogue_Timer" type="Timer" parent="."]
 wait_time = 3.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1304.0
+offset_bottom = 744.0
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 120.0
+offset_right = 1184.0
+offset_bottom = 592.0
+theme_override_font_sizes/normal_font_size = 26
+text = "Long ago, there was a family of space whales that swam through space.
+
+Unfortunately, one of the baby whales got separated from the family. 
+
+Boo, the space whale, has been flying through space all alone ever since. 
+
+An ancient whale species, no one can understand Boo’s special whale calls.
+
+But somehow, like a gentle radio signal pulsing through the void, you meet Boo !
+
+Help Boo by making a translator that can help Boo talk to different kinds of Space Whales."
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 584.0
+offset_top = 672.0
+offset_right = 734.0
+offset_bottom = 695.0
+text = "Press 'F' to Proceed"
+
+[node name="Thank_You" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 560.0
+offset_top = 336.0
+offset_right = 732.0
+offset_bottom = 359.0
+text = "Thank you for playing!"
 
 [connection signal="timeout" from="Dialogue_Timer" to="." method="_on_dialogue_timer_timeout"]
