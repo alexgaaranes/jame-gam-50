@@ -30,4 +30,4 @@ func _on_player_level_1_win() -> void:
 	win_msg.visible = true
 	GlobalSignals.emit_signal("completed_puzzle_1")
 	GlobalSignals.add_solved()
-	GlobalAudio.play_win_bgm()
+	GlobalAudio.play_wins_bgm()

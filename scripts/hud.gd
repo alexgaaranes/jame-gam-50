@@ -22,19 +22,23 @@ func _process(delta):
 
 func show_whale_interact_text():
 	#$Whale_Interact_Text.visible = true
-	$Whale_Dialogue.visible = true
+	#$Whale_Dialogue.visible = true
+	listen.visible = true
 	
 func show_galaxy_interact_text():
 	#$Galaxy_Interact_Text.visible = true
-	$Galaxy_Interact_Text.visible = true
+	#$Galaxy_Interact_Text.visible = true
+	explore.visible = true
 
 func hide_whale_interact_text():
 	#$Whale_Interact_Text.visible = false
-	$Whale_Dialogue.visible = false
+	#$Whale_Dialogue.visible = false
+	listen.visible = false
 
 func hide_galaxy_interact_text():
 	#$Galaxy_Interact_Text.visible = false
-	$Galaxy_Interact_Text.visible = false
+	#$Galaxy_Interact_Text.visible = false
+	explore.visible = false
 	
 
 func show_whale_dialogue():
