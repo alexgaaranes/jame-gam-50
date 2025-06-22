@@ -57,7 +57,6 @@ texture = ExtResource("12_g280g")
 visible = false
 position = Vector2(336, 936)
 rotation = -0.194106
-scale = Vector2(1, 1)
 texture = ExtResource("13_bften")
 flip_h = true
 

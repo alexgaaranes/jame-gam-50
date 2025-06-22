@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ckrkflvkor30i"]
+[gd_scene load_steps=11 format=3 uid="uid://d06fmuddcla4a"]
 
 [ext_resource type="Script" uid="uid://btbhqx4hv1nob" path="res://scripts/GameManager.gd" id="1_5v4id"]
 [ext_resource type="Texture2D" uid="uid://du8m33l7gvebq" path="res://assets/Background.png" id="2_pfpyc"]
@@ -53,6 +53,8 @@ environment = SubResource("Environment_2hqms")
 [node name="HudCanvas" type="CanvasLayer" parent="."]
 
 [node name="Hud" parent="HudCanvas" instance=ExtResource("9_g6e33")]
+
+[node name="explore" type="Sprite2D" parent="."]
 
 [connection signal="body_entered" from="Galaxy" to="Galaxy" method="_on_body_entered"]
 [connection signal="body_exited" from="Galaxy" to="Galaxy" method="_on_body_exited"]
