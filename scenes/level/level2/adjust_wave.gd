@@ -30,6 +30,7 @@ func _ready() -> void:
 	frequency = abs(0 - correct_freq_knob_value) * 60 + 5
 	amplitude = - abs(0 - correct_speed_knob_value) * 150 + 80
 	speed = abs(0 - correct_speed_knob_value) * 70 + 4
+	total_difference_knob_values = abs(adjust_freq_knob_value - correct_freq_knob_value) + abs(adjust_speed_knob_value - correct_speed_knob_value) + abs(adjust_amp_knob_value - correct_amp_knob_value)
 	
 func _process(delta):
 	handle_input(delta)
