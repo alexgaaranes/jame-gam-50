@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://dmy2wjd7ppa7w"]
+[gd_scene load_steps=12 format=3 uid="uid://bfchvfr2yseek"]
 
 [ext_resource type="Script" uid="uid://btbhqx4hv1nob" path="res://scripts/GameManager.gd" id="1_ig4jx"]
 [ext_resource type="Texture2D" uid="uid://du8m33l7gvebq" path="res://assets/Background.png" id="2_pn0ym"]
 [ext_resource type="PackedScene" uid="uid://kg3kqfg2wqas" path="res://scenes/whale/whale.tscn" id="3_0o7gw"]
+[ext_resource type="Texture2D" uid="uid://bs2g4sx2lk1wx" path="res://assets/BG_stars.png" id="3_pn0ym"]
 [ext_resource type="PackedScene" uid="uid://kk2modep8asl" path="res://scenes/galaxy/galaxy.tscn" id="4_d3kax"]
 [ext_resource type="Script" uid="uid://cge5hujdo2rbe" path="res://scenes/level/galaxy1.gd" id="5_lw8he"]
 [ext_resource type="Script" uid="uid://eh3wbx02mj4p" path="res://scenes/level/galaxy2.gd" id="6_g35fm"]
@@ -26,25 +27,31 @@ motion_scale = Vector2(0.5, 0.5)
 
 [node name="Space" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2(960, 536)
+scale = Vector2(3, 3)
 texture = ExtResource("2_pn0ym")
+
+[node name="Trail" type="Sprite2D" parent="."]
+position = Vector2(792, 528)
+scale = Vector2(2, 2)
+texture = ExtResource("3_pn0ym")
 
 [node name="Whale" parent="." instance=ExtResource("3_0o7gw")]
 position = Vector2(888, 496)
 
 [node name="Galaxy" parent="." instance=ExtResource("4_d3kax")]
-position = Vector2(336, 200)
+position = Vector2(-264, 408)
 script = ExtResource("5_lw8he")
 
 [node name="Galaxy2" parent="." instance=ExtResource("4_d3kax")]
-position = Vector2(1624, 168)
+position = Vector2(1776, -240)
 script = ExtResource("6_g35fm")
 
 [node name="Galaxy3" parent="." instance=ExtResource("4_d3kax")]
-position = Vector2(952, 880)
+position = Vector2(1288, 1224)
 script = ExtResource("7_g280g")
 
 [node name="Player" parent="." instance=ExtResource("8_bften")]
-position = Vector2(275, 470)
+position = Vector2(920, 216)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(1, 9)

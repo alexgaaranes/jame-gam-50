@@ -1,0 +1,74 @@
+[gd_scene load_steps=12 format=3 uid="uid://b2oltj1nnw2op"]
+
+[ext_resource type="Script" uid="uid://btbhqx4hv1nob" path="res://scripts/GameManager.gd" id="1_6ulxj"]
+[ext_resource type="Texture2D" uid="uid://du8m33l7gvebq" path="res://assets/Background.png" id="1_64aob"]
+[ext_resource type="PackedScene" uid="uid://kg3kqfg2wqas" path="res://scenes/whale/whale.tscn" id="1_855hj"]
+[ext_resource type="PackedScene" uid="uid://kk2modep8asl" path="res://scenes/galaxy/galaxy.tscn" id="1_iernp"]
+[ext_resource type="PackedScene" uid="uid://esud7bwuxrjp" path="res://scenes/player/player.tscn" id="1_oept5"]
+[ext_resource type="Texture2D" uid="uid://bs2g4sx2lk1wx" path="res://assets/BG_stars.png" id="3_1o8wa"]
+[ext_resource type="Script" uid="uid://cge5hujdo2rbe" path="res://scenes/level/galaxy1.gd" id="4_gjage"]
+[ext_resource type="Script" uid="uid://eh3wbx02mj4p" path="res://scenes/level/galaxy2.gd" id="5_x0mk0"]
+[ext_resource type="Script" uid="uid://bm4ch6gyn6jl4" path="res://scenes/level/galaxy3.gd" id="6_2hqms"]
+[ext_resource type="PackedScene" uid="uid://ht2ucbxw6pqq" path="res://scenes/hud/hud.tscn" id="8_1bkat"]
+
+[sub_resource type="Environment" id="Environment_2hqms"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 1.0
+glow_bloom = 0.45
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_6ulxj")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="Space" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(960, 536)
+scale = Vector2(3, 3)
+texture = ExtResource("1_64aob")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(808, 528)
+scale = Vector2(2.225, 2.225)
+texture = ExtResource("3_1o8wa")
+
+[node name="Whale" parent="." instance=ExtResource("1_855hj")]
+position = Vector2(888, 496)
+
+[node name="Galaxy" parent="." instance=ExtResource("1_iernp")]
+position = Vector2(-360, 360)
+script = ExtResource("4_gjage")
+
+[node name="Galaxy2" parent="." instance=ExtResource("1_iernp")]
+position = Vector2(1944, -344)
+script = ExtResource("5_x0mk0")
+
+[node name="Galaxy3" parent="." instance=ExtResource("1_iernp")]
+position = Vector2(1448, 1376)
+script = ExtResource("6_2hqms")
+
+[node name="Player" parent="." instance=ExtResource("1_oept5")]
+position = Vector2(944, 184)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(1, 9)
+zoom = Vector2(1.5, 1.5)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_2hqms")
+
+[node name="HudCanvas" type="CanvasLayer" parent="."]
+
+[node name="Hud" parent="HudCanvas" instance=ExtResource("8_1bkat")]
+
+[connection signal="body_entered" from="Galaxy" to="Galaxy" method="_on_body_entered"]
+[connection signal="body_exited" from="Galaxy" to="Galaxy" method="_on_body_exited"]
+[connection signal="body_entered" from="Galaxy2" to="Galaxy2" method="_on_body_entered"]
+[connection signal="body_exited" from="Galaxy2" to="Galaxy2" method="_on_body_exited"]
+[connection signal="body_entered" from="Galaxy3" to="Galaxy3" method="_on_body_entered"]
+[connection signal="body_exited" from="Galaxy3" to="Galaxy3" method="_on_body_exited"]
