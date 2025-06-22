@@ -4,6 +4,7 @@ extends Line2D
 @export var speed := 4.0               # Speed
 @export var point_count := 80.0         # Resolution
 @export var frequency := 5.0          # Number of full wave cycles
+
 var phase := 0.0
 
 var margin_error = 0.015
@@ -21,7 +22,6 @@ var amp_dragging = false
 var speed_dragging = false
 
 var updated = false
-
 var total_difference_knob_values = 0
 
 signal win 
@@ -39,7 +39,7 @@ func _process(delta):
 	var width = 400
 	var height = 200
 	var points = []
-
+	
 	for i in range(point_count):
 		var t = float(i) / (point_count - 1)  # from 0 to 1
 		var x = t * width
@@ -47,7 +47,7 @@ func _process(delta):
 		#points.append(Vector2(x, y + height / 2))  # center vertically
 
 		#  Add glitchy offset
-		var glitch_strength = total_difference_knob_values * 20
+		var glitch_strength = total_difference_knob_values * 25
 		var jitter_x = randf_range(-glitch_strength, glitch_strength)
 		var jitter_y = randf_range(-glitch_strength, glitch_strength)
 
