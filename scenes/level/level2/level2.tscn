@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dikyiofeavm15"]
+[gd_scene load_steps=9 format=3 uid="uid://dikyiofeavm15"]
 
 [ext_resource type="Texture2D" uid="uid://du8m33l7gvebq" path="res://assets/Background.png" id="1_q0vuy"]
 [ext_resource type="Script" uid="uid://b77mvrsyxfr16" path="res://scenes/level/level2/level_2.gd" id="1_vjjvc"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://4axunld1eoys" path="res://providers/fkeyzKnob-722325ebd60e0ee62ca20da56863c9b61790c7ac/addons/fkeyz_knob/knob.tscn" id="4_jgnos"]
 [ext_resource type="PackedScene" uid="uid://cisxisrdcaqui" path="res://scenes/level/level2/adjust_wave.tscn" id="4_tick8"]
 [ext_resource type="PackedScene" uid="uid://cdmmd66v4chjy" path="res://scenes/level/ui/you_win.tscn" id="7_iakny"]
+[ext_resource type="PackedScene" uid="uid://b3f1m7svlhixv" path="res://scenes/level/ui/game_over.tscn" id="8_iakny"]
 
 [node name="Level2" type="Node2D"]
 process_mode = 3
@@ -91,6 +92,10 @@ theme_override_font_sizes/normal_font_size = 50
 horizontal_alignment = 1
 
 [node name="YouWin" parent="." groups=["ui"] instance=ExtResource("7_iakny")]
+visible = false
+
+[node name="GameOver" parent="." instance=ExtResource("8_iakny")]
+visible = false
 
 [connection signal="win" from="Adjust Wave/Adjust Wave" to="." method="_on_adjust_wave_win"]
 [connection signal="dial_rotated" from="Freq Knob" to="Adjust Wave/Adjust Wave" method="_on_freq_knob_dial_rotated"]
