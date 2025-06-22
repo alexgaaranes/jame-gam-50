@@ -3,6 +3,7 @@ extends Node
 @onready var timer: Timer = $Timer
 @onready var timer_text: RichTextLabel = $"Timer Text"
 @onready var game_over: CanvasLayer = $GameOver
+@onready var win_msg: CanvasLayer = $"Win Msg"
 
 var has_won = false
 
@@ -89,6 +90,7 @@ func show_you_win():
 	has_won = true
 	timer.paused = true
 	you_win.visible = true
+	win_msg.visible = true
 	GlobalSignals.emit_signal("completed_puzzle_3")
 	GlobalSignals.add_solved()
 	GlobalAudio.play_win_bgm()

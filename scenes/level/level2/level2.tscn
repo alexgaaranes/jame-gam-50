@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dikyiofeavm15"]
+[gd_scene load_steps=12 format=3 uid="uid://dikyiofeavm15"]
 
 [ext_resource type="Texture2D" uid="uid://du8m33l7gvebq" path="res://assets/Background.png" id="1_q0vuy"]
 [ext_resource type="Script" uid="uid://b77mvrsyxfr16" path="res://scenes/level/level2/level_2.gd" id="1_vjjvc"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://drjhgfwtv6pp7" path="res://scenes/level/ui/timer.tscn" id="7_p170t"]
 [ext_resource type="PackedScene" uid="uid://b3f1m7svlhixv" path="res://scenes/level/ui/game_over.tscn" id="8_iakny"]
 [ext_resource type="Texture2D" uid="uid://bysppnj5u25c4" path="res://assets/Level 2.png" id="10_0vpf3"]
+[ext_resource type="Texture2D" uid="uid://dt7o5k4n3fy8k" path="res://assets/Matching Complete!.png" id="11_fx84u"]
 
 [node name="Level2" type="Node2D"]
 process_mode = 3
@@ -103,6 +104,14 @@ visible = false
 position = Vector2(640, 56)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("10_0vpf3")
+
+[node name="Win Msg" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Win Msg" type="Sprite2D" parent="Win Msg"]
+position = Vector2(672, 296)
+scale = Vector2(1.21667, 1.21667)
+texture = ExtResource("11_fx84u")
 
 [connection signal="win" from="Adjust Wave/Adjust Wave" to="." method="_on_adjust_wave_win"]
 [connection signal="dial_rotated" from="Freq Knob" to="Adjust Wave/Adjust Wave" method="_on_freq_knob_dial_rotated"]
