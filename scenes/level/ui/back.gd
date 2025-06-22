@@ -17,7 +17,7 @@ func resume_scene(scene_root: Node) -> void:
 			node.process_mode = Node.PROCESS_MODE_ALWAYS
 			resume_scene(node)
 
-func _on_button_pressed() -> void:
+func _on_texture_button_pressed() -> void:
 	emit_signal("back_pressed")
 	var main_scene = get_tree().root.get_node("Main")
 	for node in get_tree().get_nodes_in_group("ui"):

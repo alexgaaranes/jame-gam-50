@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://brfs2ufvcs3ow"]
+
+[ext_resource type="Script" uid="uid://crg77f8l2vdwa" path="res://scenes/menu/about_us.gd" id="1_6whb8"]
+[ext_resource type="Texture2D" uid="uid://brddnkbe55puk" path="res://assets/About us page.png" id="2_1iqin"]
+[ext_resource type="Texture2D" uid="uid://d2cl08fuxsvqc" path="res://assets/back1.png" id="3_x7gjq"]
+[ext_resource type="Texture2D" uid="uid://cw5kgj3scu7h" path="res://assets/back2.png" id="4_swfpt"]
+[ext_resource type="AudioStream" uid="uid://cjwe1iggc83ah" path="res://assets/audio/ui clicks.mp3" id="7_gdwcd"]
+
+[node name="AboutUs" type="Node2D"]
+script = ExtResource("1_6whb8")
+
+[node name="bg" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+scale = Vector2(0.666667, 0.666667)
+texture = ExtResource("2_1iqin")
+
+[node name="back" type="TextureButton" parent="."]
+offset_left = -8.0
+offset_right = 188.0
+offset_bottom = 136.0
+texture_normal = ExtResource("3_x7gjq")
+texture_hover = ExtResource("4_swfpt")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ui click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_gdwcd")
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

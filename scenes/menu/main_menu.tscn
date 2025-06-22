@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://dj8lrubiuvbmt"]
+
+[ext_resource type="Script" uid="uid://ba00vvrjvdn5d" path="res://scenes/menu/main_menu.gd" id="1_3rkf3"]
+[ext_resource type="Texture2D" uid="uid://bmfcja384sfai" path="res://assets/menu_bg.png" id="2_xn6kt"]
+[ext_resource type="Texture2D" uid="uid://cshkkqymghiaf" path="res://assets/play1.png" id="3_isoef"]
+[ext_resource type="Texture2D" uid="uid://bixoonclq85fb" path="res://assets/play2.2.png" id="4_xn6kt"]
+[ext_resource type="Texture2D" uid="uid://chfg5osu1t41a" path="res://assets/about_us1.png" id="5_vovv2"]
+[ext_resource type="Texture2D" uid="uid://cp1k67xp1kxue" path="res://assets/about_us2.1.png" id="6_xn6kt"]
+[ext_resource type="AudioStream" uid="uid://cjwe1iggc83ah" path="res://assets/audio/ui clicks.mp3" id="7_isoef"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_3rkf3")
+
+[node name="bg" type="Sprite2D" parent="."]
+position = Vector2(640, 360)
+scale = Vector2(0.666667, 0.666667)
+texture = ExtResource("2_xn6kt")
+
+[node name="play" type="TextureButton" parent="."]
+offset_left = 304.0
+offset_top = 376.0
+offset_right = 419.0
+offset_bottom = 456.0
+texture_normal = ExtResource("3_isoef")
+texture_hover = ExtResource("4_xn6kt")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="about us" type="TextureButton" parent="."]
+offset_left = 256.0
+offset_top = 456.0
+offset_right = 470.0
+offset_bottom = 528.0
+texture_normal = ExtResource("5_vovv2")
+texture_hover = ExtResource("6_xn6kt")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ui click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_isoef")
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="about us" to="." method="_on_about_us_pressed"]
